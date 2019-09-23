@@ -30,7 +30,7 @@ class LoginController extends Controller
      */
     //ログインした後のレダイレクト先
 
-    protected $redirectTo = '/user/mypage/';
+    protected $redirectTo = '/user/agreement/';
 
     /**
      * Create a new controller instance.

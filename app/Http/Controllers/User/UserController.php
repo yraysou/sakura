@@ -24,4 +24,9 @@ class UserController extends Controller
             return redirect()->route('user.loginpage');
         }
     }
+
+    // 利用規約
+    public function agreement(){
+        return view('user/agreement');
+    }
 }
