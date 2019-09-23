@@ -25,7 +25,10 @@ Route::get('/user/logout', 'User\Auth\LoginController@logout')->name('user.logou
 // ユーザ表示画面
 Route::get('/user/mypage/', 'User\UserController@show')->name('userpage');
 
-/*-----------------------------
+// 利用規約
+Route::get('/user/agreement/', 'User\UserController@agreement')->name('agreement');
+
+/*-----------------------------mypage
 *managerの処理
 ------------------------------*/
 // managerログイン

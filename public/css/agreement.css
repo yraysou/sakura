@@ -1,0 +1,61 @@
+.check p{
+    color: red;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.unShow {
+    display: none;
+}
+
+.main-body{
+    text-align: left;
+    background-color: white;
+}
+
+.scroll{
+    overflow-y: scroll;
+}
+
+.main-body h3{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.main-body h2{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.main-body p{
+    margin-bottom: 8px;
+}
+
+.main-body a{
+    color: blue;
+}
+
+.btn-list{
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 65%;
+}
+
+.boxing {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.boxing{
+    font-size: 15px;
+    font-weight: bolder;
+    margin-bottom: 100px;
+}
+
+
+a.disabled{
+    pointer-events: none;
+    opacity: 0.4;
+}
