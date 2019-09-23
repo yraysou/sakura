@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*===================================
+ first view
+===================================*/
+#mainBlk.topMainBlk{
+    padding-top: 280px;
+}
+.topImgBlk{
+    width: 100%;
+    min-height: 200px;
+    background: #17268e;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+}
+.imgArrange{
+    width:40%;
+}
+.topImgBlk .txtBlk>txt{
+    font-size: 1.4rem;
+}

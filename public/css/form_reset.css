@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+
+/*text*/
+input[type="text"],
+input[type="password"]  {
+    padding: 0;
+    border: none;
+    border-radius: 0;
+    outline: none;
+    background: none;
+}
+/*radio*/
+input[type="radio"] {
+    display: none;
+}
+input[type="radio"]:checked + label {
+    /*background: #ff0000;*/
+}
+/*checkbox*/
+input[type="checkbox"] {
+    display: none;
+}
+input[type="checkbox"]:checked + label {
+    /*background: #ff0000;*/
+}
+/*select*/
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+/*submit*/
+form button,
+input[type="submit"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 0;
+    border: none;
+    outline: none;
+    background: transparent;
+}

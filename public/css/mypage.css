@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.photoArea {
+    display: flex;
+}
+
+.photoEle {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.photoEle > a  > img{
+    margin: 0 auto;
+    display: block;
+}
+
+.photoEle > a > span {
+    display: inline-block;
+    margin: 15px auto;
+    font-weight: 700;
+}
+
+.getWrapper {
+    position: relative;
+    width: 40%;
+    margin: 0 auto;
+    display: flex;
+}
+.getList {
+    width: 55%;
+    text-align: center;
+    font-size: 1.7rem;
+    border-bottom: 1px solid #666666;
+    cursor: pointer;
+    color: #666666;
+    background-color: white;
+}
+
+.getImage {
+    display: inline-block;
+    height: 35px;
+    line-height: 35px;
+    width: 30%;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-left: 10px;
+    border-radius:5px;
+    text-align: center;
+    color: white!important;
+    background-color: #ff9900;
+}
+
+.triangle {
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	border-left: 6px solid transparent;
+	border-right: 6px solid transparent;
+	border-top: 6px solid #666666;
+	pointer-events: none;
+}
+
+
+
+
+
+

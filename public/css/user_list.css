@@ -1,0 +1,98 @@
+.main-body {
+    width: 80%;
+    height: 480px;
+    background-color: #c5c5e0;
+    margin: auto;
+    margin-top: 10px;
+    border: #7678eb solid 3px;
+}
+
+.scroll {
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 90%;
+    height: 380px;
+    overflow: scroll;
+}
+
+.table {
+    width: 100%;
+    max-height: 380px; 
+}
+
+.table thead th {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: #c5c5e0;
+}
+
+
+.column {
+    width: 26%;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.link{
+    width: 11px;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.record {
+    background-color: white;
+    margin-bottom: 2px;
+    border-bottom: solid 5px #c5c5e0;
+    height:35px;
+    line-height: 35px;
+}
+
+.record:hover {
+    background-color: #7678eb;
+}
+
+.fontRed:hover {
+    color: #ff5100;
+    font-weight: 800;
+}
+
+.fontWhite:hover {
+    color: white;
+    font-weight: 800;
+}
+
+.lineHeight {
+    display: inline-block;
+    line-height: 35px;
+}
+
+.noColumn {
+    position: absolute;
+    font-size: 2rem;
+    top: 43%;
+    left: 39%;
+}
+
+.linkList {
+    width: 70%;
+    margin: 0 auto;
+    margin-top: 40px;
+    display: flex;
+    text-align: center;
+}
+
+.linkBtn {
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    margin: 0 auto;
+    line-height: 40px;
+    font-weight: 600;
+    border-radius:5px;
+    text-align: center;
+    color: white!important;
+    background-color: #7678eb;
+    left: 30%;
+}

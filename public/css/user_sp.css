@@ -1,0 +1,56 @@
+@media screen and (max-width:480px){
+    #wrap {
+        padding-top: 0;
+        background-color: antiquewhite;
+        height: 100vh;
+    }
+    .sendButton, input[type="submit"].sendButton {
+        width: 170px;
+        font-size: 1.5rem;
+    }
+    .form-body {
+        height: 380px;
+    }
+    .photoArea {
+        margin: 0;
+        text-align: center;
+    }
+    .photoEle {
+        width: 100%;
+    }
+    .printImg, .esImg {
+        display: none;
+    }
+    .bottomEle {
+        display: block;
+        margin: 15px auto;
+
+    }
+    .left {
+        width: 100%;
+    }
+    .left > h2 {
+        font-size: 2.3rem;
+        font-weight: 700;
+    }
+    .left > p {
+        font-size: 1.5rem;
+    }
+    .fontRed {
+        margin: 10px auto;
+    }
+    .right{
+        width: 100%;
+    }
+    .getWrapper {
+        display:inline-block;
+        width: 100%;
+    } 
+    .getList {
+        margin: 5px auto;
+    }
+    .getImage {
+        margin: 20px 0;
+        width: 45%;
+    }  
+} 

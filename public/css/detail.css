@@ -1,0 +1,86 @@
+@charset "UTF-8";
+
+.photoArea {
+    margin: 20px 0;
+    display: flex;
+}
+
+.photoEle {
+    width: 30%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.photoEle > img {
+    margin: 0 auto;
+    display: block;
+    height: 250px;
+    object-fit: cover;
+}
+
+.photoEle > span {
+    display: inline-block;
+    margin: 15px auto;
+    font-weight: 700;
+}
+
+.bottomEle {
+    width: 75%;
+    display: flex;
+    margin: 30px auto;
+
+}
+
+.left {
+    width: 50%;
+}
+
+.left > h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.left > p {
+    font-size: 2rem;
+}
+
+.right {
+    width: 50%;
+}
+
+.rightEle {
+    display: flex;
+    height: 37px;
+    font-size: 2.8rem;
+    margin-top: 7px;
+}
+
+.rightEle > p {
+    text-align: right;
+    font-weight: 700;
+    width: 35%;
+}
+
+.rightEle > span{
+    background-color: white;
+    border-radius: 3px;
+    width: 65%;
+}
+
+.fontRed{
+    color:red;
+    font-weight: 800;
+}
+
+.linkBtn{
+    display: inline-block;
+    width: 150px;
+    height: 40px;
+    margin: 0 10px;
+    line-height: 40px;
+    font-weight: 600;
+    border-radius:5px;
+    text-align: center;
+    color: white!important;
+    background-color: #ff9900;
+}

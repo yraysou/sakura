@@ -1,0 +1,212 @@
+@charset "UTF-8";
+
+/*  label
+===================================*/
+.form label{
+  /*margin-bottom: 10px;*/
+  /*display: flex;*/
+  /*align-items: center;*/
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #707070;
+}
+.form label .required{
+  /*margin-left: 10px;*/
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #FC54B4;
+  text-align: center;
+}
+.form input,
+.form textarea{
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+}
+
+/*===================================
+  border
+===================================*/
+.form label.border{
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  /*font-size: 1.2rem;*/
+}
+.form label.border .required{
+  margin-left: 10px;
+  padding: 5px;
+  color: #fff;
+  border-radius: 5px;
+  background-color: #FC54B4;
+}
+.form input[type="text"].border,
+.form input[type="tel"].border {
+  display: block;
+  width: 100%;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  background: #fff;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+}
+input[name^="cardName"]{
+    text-transform: uppercase;
+}
+
+/*  selectWrap
+===================================*/
+.form .profileSet select{
+  padding: 5px 0px 0;
+  color: #707070;
+  font-size: 1.2rem;
+}
+.form .profileSet .selectWrap{
+  width: 100%;
+  color: #707070;
+  position: relative;
+}
+.form .profileSet .selectWrap::before{
+  content: "";
+  width: 5px;
+  height: 5px;
+  border-right: solid 2px;
+  border-bottom: solid 2px;
+  transform: rotate(45deg);
+  position: absolute;
+  right: 15px;
+  bottom: 0;
+  top: 0;
+  margin: auto;
+}
+
+/*  checkbox
+===================================*/
+/* checkList
+-------------------------------*/
+/*.profileSet .radio,*/
+.profileSet .checkList .checkbox {
+  box-sizing: border-box;
+  display: inline-block;
+      margin: 0 10px 8px 0;
+      padding: 5px 0px 5px 25px;
+      cursor: pointer;
+      position: relative;
+}
+/*.radio:after, */
+.profileSet .checkList .checkbox:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  content: '';
+}
+.profileSet .checkList .checkbox:before {
+  -webkit-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  position: absolute;
+  left: 5px;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fc54b4;
+  content: '';
+  opacity: 0;
+}
+.profileSet .checkList input[type=checkbox]:checked + .checkbox:before {
+  opacity: 1;
+}
+
+/* LargeBtnList
+-------------------------------*/
+/*.profileSet .radio,*/
+.profileSet .LargeBtnList .checkbox {
+  box-sizing: border-box;
+  display: inline-block;
+  margin: 8px 10px 0px 0;
+  padding: 10px 10px;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.6rem;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+}
+
+/*.radio:after, */
+/*.profileSet .LargeBtnList .checkbox:after {
+  -webkit-transition: border-color 0.2s linear;
+  transition: border-color 0.2s linear;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #bbb;
+  border-radius: 50%;
+  content: '';
+}*/
+.profileSet .LargeBtnList .checkbox:before {
+  -webkit-transition: opacity 0.2s linear;
+      transition: opacity 0.2s linear;
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: 2px;
+      background: #fc54b4;
+      content: '';
+      opacity: 0;
+}
+.profileSet .LargeBtnList input[type=checkbox]:checked + .checkbox:before {
+  opacity: 0.2;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+/*submit*/
+form button,
+input[type="submit"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+.sendButton,
+input[type="submit"].sendButton{
+    text-align: center;
+    padding:5px;
+    background-color:#7678eb;
+    color:#ffffff!important;
+    display: block;
+    width:25%;
+    margin:0 auto;
+    margin-bottom:60px;
+    cursor: pointer;
+    font-size: 3.0rem;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.insertBtn {
+  background-color:#ff9900!important;
+}

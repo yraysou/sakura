@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+/*===================================
+ head
+===================================*/
+.head{
+    margin-top: 50px;
+}
+
+
+/*===================================
+ form
+===================================*/
+.form-body{
+    width: 70%;
+    height: 450px;
+    background-color: #c5c5e0;
+    margin: auto;
+    border: #7678eb solid 3px;
+}
+
+.input-title{
+    font-size:1.8rem;
+    font-weight: bold;
+}
+
+.form-horizontal{
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.form-group{
+    margin: auto;
+    width: 60%;
+    text-align: left;
+    padding:30px 0px;
+}
+
+#store_name, #password, #user_id{
+    margin: auto;
+    width: 100%;
+    height: 30px;
+    background-color: aliceblue;
+    font-size: 1.6rem;
+    border-radius: 5px;;
+}

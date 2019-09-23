@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+.input-area {
+  width: 40%;
+  margin: 20px auto;
+  text-align: left;
+  font-size: 2rem;
+}
+
+.input-column {
+  display:flex;
+  margin-bottom: 5px;
+}
+
+.column-left {
+  width: 30%;
+  text-align: right;
+}
+
+.column-right {
+  width: 70%;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.column-name {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.imageArea {
+    display:flex;
+    margin: 0 auto;
+}
+
+.image {
+    margin: 0 auto;
+    width: 27%;
+}
+
+.drop {
+    height: 270px;
+    width: 230px;
+    line-height: 200px;
+    overflow: hidden;
+    background: #ffc457;
+    border: 3px #ff9900 dashed;
+    color: #ff9900;
+    font-size: 3.5rem;
+    font-weight: bold;
+    text-align: center;
+    cursor: default;
+    margin: 0 auto;
+  }
+  
+  #drop1.dragover, #drop2.dragover, #drop3.dragover,
+  #drop1:active, #drop2:active, #drop3:active {
+    background: #cfc;
+    border-color: #9c9;
+    color: #9c9;
+    cursor: copy;
+  }
+
+  .image > span{
+    display: block;
+    margin: 20px 0;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* #fileInput {
+    display: none;
+  } */
+
+  .output img {
+    display: block;
+    margin: 15px auto;
+    text-align: center;
+    height: 200px;
+    overflow: hidden;
+  }
+
+  .errors {
+    display: flex;
+    width: 40%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .error__left{
+    width: 35%;
+  }
+
+  .error__right{
+    text-align: left;
+    width: 65%;
+  }
+
+  .error__right > ul > li {
+    color: red;
+  }
