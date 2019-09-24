@@ -28,6 +28,8 @@ Route::get('/user/mypage/', 'User\UserController@show')->name('userpage');
 // 利用規約
 Route::get('/user/agreement/', 'User\UserController@agreement')->name('agreement');
 
+Route::post('/user/changeStatus/', 'User\UserController@changeStatus')->name('chageStatus');
+
 /*-----------------------------mypage
 *managerの処理
 ------------------------------*/
