@@ -218,7 +218,12 @@
             </div>
             <div class="overlay" onclick="clickfunc(this.value)">
                 <div class="btn-list">
-                    <a href="{{route('userpage')}}" class="sendButton btn disabled" id="disabled" > 次へ</a>
+                    {{-- <a href="{{route('userpage')}}" class="sendButton btn disabled" id="disabled" > 次へ</a> --}}
+                    <form action="{{route('chageStatus')}}" method="POST">
+                        {{ csrf_field() }}
+                        <input type='hidden' value='1' name="agreement_status">
+                        <input type='submit' class="sendButton btn disabled" id="disabled" value='次へ'>
+                    </form>
                 </div>
             </div>
     </div>
