@@ -62,10 +62,3 @@ Route::get('/manager/user_detail/{user_id}','Manager\ManagerController@detail')-
 
 // ユーザ削除
 Route::get('/manager/delete/{user_id}','Manager\ManagerController@delete')->name('user_delete');
-
-
-
-
-
-
-
