@@ -53,7 +53,7 @@ class SignupController extends Controller
             $store_name = Auth::guard('manager')->user()->store_name;
 
             //ディレクトリの作成
-            if (!file_exists(public_path()."/image"."/".$userId)) { 
+            if (!file_exists(public_path()."/image"."/".$store_name."/".$userId)) { 
                 mkdir(public_path()."/image"."/".$store_name."/".$userId, 0777, TRUE);
             }
 
