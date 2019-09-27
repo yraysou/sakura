@@ -8,18 +8,6 @@
 @endsection
 
 @section('js')
-    {{-- <script type="text/javascript">   
-        $( function() { 
-                $(document).scroll(function() { 
-                    scrollHeight = $(this).height();
-                    scrollPosition = $('#policy').height() + $(this).scrollTop(); 
-                    if ((scrollHeight - scrollPosition) / scrollHeight <= 0.0001) {
-                        //スクロールの位置が下部5%の範囲に来た場合
-                        $('#agree').removeAttr('disabled');
-                    }
-                });
-        }); 
-    </script> --}}
     <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="{{asset('/js/agreement.js?cacherefResh19111')}}"></script>
 @endsection
