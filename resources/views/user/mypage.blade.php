@@ -11,7 +11,7 @@
 @endsection
 
 @section('main')
-    <div id="mainBlk" class="sideSpace">
+    <div id="mainBlk" class="sideSpace ">
         <div class="photoArea">
             <div class="photoEle">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $user->original))}}" alt=""><span>本データ</span>

@@ -1,3 +1,17 @@
 @media screen and (max-width:480px){
-    
+    .main-body{
+        height: 680px;
+    }
+
+    .scroll{
+        height: 630px;
+    }
+
+    .overlay{
+        margin-top: 50px;
+    }
+
+    .abc{
+        margin:0 auto!important;
+    }
 }
