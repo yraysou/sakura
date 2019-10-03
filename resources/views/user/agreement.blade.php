@@ -25,8 +25,8 @@
 @endsection
 
 @section('main')
-    <div id="mainBlk" class="sideSpace">
-        <div class="main-body">
+    <div id="mainBlk" class="sideSpace abc">
+        <div class="main-body main-second">
             <div class="scroll">
                 <div class="check unShow" id="unShow">
                     <p>

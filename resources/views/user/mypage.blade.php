@@ -11,7 +11,7 @@
 @endsection
 
 @section('main')
-    <div id="mainBlk" class="sideSpace">
+    <div id="mainBlk" class="sideSpace ">
         <div class="photoArea">
             <div class="photoEle">
                 {{-- <a href="/image/{{ $manager->store_name }}/{{ $users->user_id }}/{{ $users->original }}" download="{{ $users->original }}"> --}}
