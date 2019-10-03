@@ -8,13 +8,13 @@
     <div id="mainBlk" class="sideSpace">
         <div class="photoArea">
             <div class="photoEle">
-            <img src="/image/{{ $manager->store_name }}/{{ $users->user_id }}/{{ $users->original }}" alt=""><span>本データ</span>
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt=""><span>本データ</span>
             </div>
             <div class="photoEle">
-                <img src="/image/{{ $manager->store_name }}/{{ $users->user_id }}/{{ $users->print }}" alt=""><span>印刷用データ</span>
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt=""><span>印刷用データ</span>
             </div>
             <div class="photoEle">
-            <img src="/image/{{ $manager->store_name }}/{{ $users->user_id }}/{{ $users->se }}" alt=""><span>SE用データ</span>
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt=""><span>SE用データ</span>
             </div>
         </div>
         <div class="bottomEle">

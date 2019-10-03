@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Manager;
 use Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Manager;
 use DB;
@@ -63,6 +64,15 @@ class ManagerController extends Controller
     }
 
     public function delete($user_id) {
+        $user = DB::table('users')
+                        ->leftjoin(
+                            'manager',
+                            'users.manager_id','=','manager.manager_id')
+                        ->where([['users.id',$user_id]])
+                        ->first();
+                        // dump($user);
+                        // exit;
+        Storage::deleteDirectory("/public"."/".$user->store_name."/".$user->user_id);
         User::destroy($user_id);
         $users = User::orderBy('created_at', 'desc')->get();
         return view('manager.user_list', [

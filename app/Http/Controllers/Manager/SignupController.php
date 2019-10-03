@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Manager;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Validator;
 use Auth;
 use App\Models\User;
@@ -52,50 +53,25 @@ class SignupController extends Controller
             $userId = $request->user_id; 
             $store_name = Auth::guard('manager')->user()->store_name;
 
-            //ディレクトリの作成
-            if (!file_exists(public_path()."/image"."/".$store_name."/".$userId)) { 
-                mkdir(public_path()."/image"."/".$store_name."/".$userId, 0777, TRUE);
-            }
-
+            // ディレクトリ作成
             if($request->original){
-                //ファイル名の作成
-                $original = uniqid("original_") . "_" . $request->original->getClientOriginalName();
-                //ファイルの保存
-                $request->original->move(public_path()."/image"."/".$store_name."/".$userId, $original);
-                //DBに登録
-                $user->original = $original;
+                $user->original = $request->file('original')->store('public/'.$store_name."/".$userId);
             }
             //印刷用写真
             if($request->print){
-                $print = uniqid("print_") . "_" . $request->print->getClientOriginalName();
-                $request->print->move(public_path()."/image"."/".$store_name."/".$userId, $print);
-                $user->print = $print;
+                $user->print = $request->file('print')->store('public/'.$store_name."/".$userId);
             }
-
+            // se用写真
             if($request->se){
-                //SE用写真
-                $se = uniqid("se_") . "_" . $request->se->getClientOriginalName();
-                $request->se->move(public_path()."/image"."/".$store_name."/".$userId, $se);
-                $user->se = $se;
+                $user->se = $request->file('se')->store('public/'.$store_name."/".$userId);
             }
 
             $after_half_year = Carbon::parse($request->shooting_date)->addMonth(6);
             $user->shooting_date = $request->shooting_date;
             $user->after_half_year = $after_half_year;
             $user->save();
-            // User::create([
-            //     'user_id' => $request->user_id,
-            //     'name' => $request->name,
-            //     'password' => Hash::make($request->password),
-            //     'conf_pass' => $request->password,
-            //     'manager_id' => $request->manager_id,
-            //     'original' => $original,
-            //     'print' => $print,
-            //     'se' => $se,
-            //     'shooting_date' => $request->shooting_date,
-            //     'after_half_year' => $after_half_year
-            // ]);
 
+            
             //リダイレクト
             return redirect()->route('user_list');
         } else {
