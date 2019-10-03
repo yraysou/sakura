@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Manager;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 use Validator;
 use Auth;
 use App\Models\User;
@@ -53,30 +54,33 @@ class SignupController extends Controller
             $store_name = Auth::guard('manager')->user()->store_name;
 
             //ディレクトリの作成
-            if (!file_exists(public_path()."/image"."/".$store_name."/".$userId)) { 
-                mkdir(public_path()."/image"."/".$store_name."/".$userId, 0777, TRUE);
-            }
+            // if (!file_exists(public_path()."/image"."/".$store_name."/".$userId)) { 
+            //     mkdir(public_path()."/image"."/".$store_name."/".$userId, 0777, TRUE);
+            // }
 
             if($request->original){
-                //ファイル名の作成
-                $original = uniqid("original_") . "_" . $request->original->getClientOriginalName();
-                //ファイルの保存
-                $request->original->move(public_path()."/image"."/".$store_name."/".$userId, $original);
-                //DBに登録
-                $user->original = $original;
+                // //ファイル名の作成
+                // $original = uniqid("original_") . "_" . $request->original->getClientOriginalName();
+                // //ファイルの保存
+                // $request->original->move(public_path()."/image"."/".$store_name."/".$userId, $original);
+                // //DBに登録
+                // $user->original = $original;
+                $user->original = $request->file('original')->store('public/'.$store_name."/".$userId);
             }
             //印刷用写真
             if($request->print){
-                $print = uniqid("print_") . "_" . $request->print->getClientOriginalName();
-                $request->print->move(public_path()."/image"."/".$store_name."/".$userId, $print);
-                $user->print = $print;
+                // $print = uniqid("print_") . "_" . $request->print->getClientOriginalName();
+                // $request->print->move(public_path()."/image"."/".$store_name."/".$userId, $print);
+                // $user->print = $print;
+                $user->print = $request->file('print')->store('public/'.$store_name."/".$userId);
             }
 
             if($request->se){
-                //SE用写真
-                $se = uniqid("se_") . "_" . $request->se->getClientOriginalName();
-                $request->se->move(public_path()."/image"."/".$store_name."/".$userId, $se);
-                $user->se = $se;
+                // //SE用写真
+                // $se = uniqid("se_") . "_" . $request->se->getClientOriginalName();
+                // $request->se->move(public_path()."/image"."/".$store_name."/".$userId, $se);
+                // $user->se = $se;
+                $user->se = $request->file('se')->store('public/'.$store_name."/".$userId);
             }
 
             $after_half_year = Carbon::parse($request->shooting_date)->addMonth(6);
