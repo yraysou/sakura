@@ -14,11 +14,9 @@
     <div id="mainBlk" class="sideSpace">
         <div class="photoArea">
             <div class="photoEle">
-                {{-- <a href="/image/{{ $manager->store_name }}/{{ $users->user_id }}/{{ $users->original }}" download="{{ $users->original }}"> --}}
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $user->original))}}" alt=""><span>本データ</span>
             </div>
             <div class="photoEle printImg">
-                {{-- <a href="/image/{{ $manager->store_name }}/{{ $users->user_id }}/{{ $users->print }}" download="{{ $users->print }}"> --}}
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $user->print))}}" alt=""><span>写真印刷用データ</span>
             </div>
             <div class="photoEle esImg">
