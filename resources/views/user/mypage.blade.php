@@ -14,13 +14,13 @@
     <div id="mainBlk" class="sideSpace">
         <div class="photoArea">
             <div class="photoEle">
-                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $user->original))}}" alt=""><span>本データ</span>
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt=""><span>本データ</span>
             </div>
             <div class="photoEle printImg">
-                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $user->print))}}" alt=""><span>写真印刷用データ</span>
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt=""><span>写真印刷用データ</span>
             </div>
             <div class="photoEle esImg">
-                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $user->se))}}" alt=""><span>ESデータ</span>
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt=""><span>ESデータ</span>
             </div>
         </div>
         <div class="bottomEle">
@@ -48,9 +48,9 @@
         <div class="getWrapper">
             <select class="getList">
                 <option selected="selected"  hidden>写真を選択して下さい</option>
-                <option class="original" value="/image/{{ $manager->store_name }}/{{ $users->user_id }}/{{ $users->original }}">本データ</option>
-                <option class="print" value="/image/{{ $manager->store_name }}/{{ $users->user_id }}/{{ $users->print }}">写真印刷用</option>
-                <option class="es" value="/image/{{ $manager->store_name }}/{{ $users->user_id }}/{{ $users->se }}">ES用</option>
+                <option class="original" value="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt="">本データ</option>
+                <option class="print" value="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt="">写真印刷用</option>
+                <option class="es" value="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt="">ES用</option>
             </select>
             <a 
                 class="getImage" 
