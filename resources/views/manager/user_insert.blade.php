@@ -32,6 +32,9 @@
                     <p class="column-left">氏名: </p><span class="column-right"><input class="column-name" type="text" vaule="" id="name" name="name"></span>
                 </div>
                 <div class="input-column">
+                    <p class="column-left">電話番号: </p><span class="column-right"><input class="column-name" type="text" vaule="" id="tel_number" name="tel_number"></span>
+                </div>
+                <div class="input-column">
                 <p class="column-left">撮影日時: </p><span class="column-right"><input class="column-name" type="date" vaule="{{ $dt }}" id="shooting_date" name="shooting_date"></span>
                 </div>
                 <input type="hidden" id="user_id" name="user_id" value="{{ $user_id }}">

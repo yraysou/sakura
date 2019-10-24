@@ -57,10 +57,10 @@ Route::post('/sign_up', 'Manager\SignupController@userCreate')->name('user.creat
 Route::get('/manager/user_insert', 'Manager\ManagerController@user_insert')->name('user_insert');
 
 // ユーザ一覧画面
-Route::get('/manager/user_list','Manager\ManagerController@show')->name('user_list');
+Route::get('/manager/user_list','Manager\ManagerController@userListSearch')->name('user_list');
 
 // ユーザ詳細画面
 Route::get('/manager/user_detail/{user_id}','Manager\ManagerController@detail')->name('user_detail');
 
 // ユーザ削除
-Route::get('/manager/delete/{user_id}','Manager\ManagerController@delete')->name('user_delete');
+Route::get('/manager/delete/{user_id}/{keyword?}','Manager\ManagerController@delete')->name('user_delete');

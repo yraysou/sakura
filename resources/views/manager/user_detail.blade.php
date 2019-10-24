@@ -39,6 +39,9 @@
                     <p>氏名:</p><span>{{ $users->name }}</span>
                 </div>
                 <div class="rightEle">
+                    <p>電話番号:</p><span>{{ $users->tel_number }}</span>
+                </div>    
+                <div class="rightEle">
                     <p>撮影日:</p><span>{{ $users->shooting_date }}</span>
                 </div>
     
