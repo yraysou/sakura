@@ -30,6 +30,7 @@ Route::get('/user/agreement/', 'User\UserController@agreement')->name('agreement
 
 Route::post('/user/changeStatus/', 'User\UserController@changeStatus')->name('chageStatus');
 
+
 /*-----------------------------mypage
 *managerの処理
 ------------------------------*/
@@ -64,3 +65,6 @@ Route::get('/manager/user_detail/{user_id}','Manager\ManagerController@detail')-
 
 // ユーザ削除
 Route::get('/manager/delete/{user_id}/{keyword?}','Manager\ManagerController@delete')->name('user_delete');
+
+// ユーザー更新
+Route::post('/user/update','Manager\ManagerController@userUpdate')->name('userUpdate');

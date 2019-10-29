@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Manager;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
 
@@ -156,5 +156,14 @@ class ManagerController extends Controller
         }else {
             return redirect()->route('manager.loginpage');
         }    
+    }
+
+    //  ユーザーデータ更新
+    public function userUpdate(Request $request){
+        $user = User::Where('user_id',$request->user_id)
+                            ->first();
+        $user->fill($request->all())->save();
+        return redirect()->route('user_detail',['id' => $user])
+                        ->with('flash_message', ' 更新が完了しました');
     }
 }
