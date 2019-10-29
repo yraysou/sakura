@@ -57,7 +57,7 @@ class LoginController extends Controller
 
     public function guard()
     {
-        return \Auth::guard('manager');
+        return Auth::guard('manager');
     }
 
     public function login(Request $request)
@@ -65,10 +65,15 @@ class LoginController extends Controller
         $manager = Manager::Where('store_name',$request->store_name)
             ->where('password',$request->password)
             ->first();
+            // dd($manager);
         if($manager){
             Auth::guard('manager')->login($manager);
-            return redirect('/manager/user_list/');
-        }else {
+            if($manager->manager_id == 1){
+                return redirect()->route('manager_list');
+            }else{
+                return redirect()->route('user_list');
+            }
+        }else{
             return redirect()->route('manager.loginpage');
         }
     }

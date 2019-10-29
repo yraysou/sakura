@@ -15,12 +15,7 @@
                 <div class="form-group">
                     <label for="store_name" class="input-title">スタジオ</label>
                     <div class="input-group">
-                        <select name="store_name" id="store_name" class="form-control">
-                            <option value="">選択してください</option>
-                            @foreach($store as $s)
-                                <option value="{{ $s->store_name }}">{{ $s->store_name }}</option>
-                            @endforeach
-                        </select> 
+                        <input id="store_name" type="text" class="" name="store_name" required>
                         @if ($errors->has('store_name'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('store_name') }}</strong>
@@ -33,7 +28,6 @@
                     <label for="password" class="input-title">Password</label>
                     <div class="input-group">
                         <input id="password" type="password" class="" name="password" required>
-
                         @if ($errors->has('password'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('password') }}</strong>

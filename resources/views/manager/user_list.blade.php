@@ -55,10 +55,11 @@
             </div>
         </div>
         <div class="linkList">
-            <a href="{{ route('user_insert') }}" class="linkBtn">新規登録</a>
             @if(Auth::guard('manager')->user()->manager_id == 1)
                 <a href="{{ route('manager.createForm') }}" class="linkBtn">店舗登録</a>
                 <a href="{{ route('manager_list') }}" class="linkBtn">店舗一覧</a>
+            @else
+                <a href="{{ route('user_insert') }}" class="linkBtn">新規登録</a>
             @endif
             <a href="{{ route('manager.logout') }}" class="linkBtn">ログアウト</a>
         </div>

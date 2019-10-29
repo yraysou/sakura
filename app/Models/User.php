@@ -31,6 +31,7 @@ class User extends Authenticatable
         'shooting_date',
         'after_half_year',
         'agreement_status',
+        'tel_number'
     ];
 
     /**
