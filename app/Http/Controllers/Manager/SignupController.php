@@ -21,6 +21,7 @@ class SignupController extends Controller
                 'user_id'   => 'required|max:25',
                 'name'      => 'required|max:25',
                 'password' => 'required|string|min:6',
+                'tel_number'      => 'required|max:25',
                 'manager_id'      => 'required|integer',
                 'shooting_date' => 'required|date',
             ];
@@ -29,6 +30,7 @@ class SignupController extends Controller
                 'user_id.required'   => 'user_idは必ず入力してください。',
                 'name.required'      => '名前は必ず入力してください。',
                 'password.required'  => 'パスワードは必ず入力してください。',
+                'tel_number.required' => ' 電話番号は必ず入力してください。',
                 'manager_id.required' => 'idは数値で入力してください。',
                 'shooting_date.required' => '撮影日は必ず入力してください。'
 
@@ -47,6 +49,7 @@ class SignupController extends Controller
             $user->name = $request->name;
             $user->password = Hash::make($request->password);
             $user->conf_pass = $request->password;
+            $user->tel_number = $request->tel_number;    
             $user->manager_id = $request->manager_id;
 
             //写真の保存名
@@ -110,7 +113,7 @@ class SignupController extends Controller
             $manager->store_name = $request->store_name;
             $manager->password = $request->password;
             $manager->save();
-            return redirect()->route('user_list');
+            return redirect()->route('manager_list');
         }else{
             return redirect()->route('manager.loginpage');
         }

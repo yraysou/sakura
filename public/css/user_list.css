@@ -30,7 +30,7 @@
 
 
 .column {
-    width: 26%;
+    width: 21%;
     font-size: 1.8rem;
     font-weight: 700;
 }
@@ -95,4 +95,33 @@
     color: white!important;
     background-color: #7678eb;
     left: 30%;
+}
+
+.search-group{
+    display: flex;
+    margin-left: 38%;
+}
+
+.searchBtn{
+    display: inline-block;
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    font-weight: 600;
+    border-radius:5px;
+    text-align: center;
+    color: white!important;;
+    background-color: #7678eb!important;
+    font-size: 15px;
+}    
+
+.typeBtn{
+    border-radius:5px!important;
+    background-color: white!important;
+    height: 30px;
+    width: 150px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+    margin-right: 15px;
+    font-size: 12px;
 }

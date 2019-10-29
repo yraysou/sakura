@@ -33,9 +33,10 @@
             </div>
         </div>
         <div class="linkList">
-            <a href="{{ route('user_list') }}" class="linkBtn">ユーザ一覧</a>
             @if(Auth::guard('manager')->user()->manager_id == 1)
                 <a href="{{ route('manager.createForm') }}" class="linkBtn">店舗登録</a>
+            @else
+                <a href="{{ route('user_list') }}" class="linkBtn">ユーザ一覧</a>
             @endif
             <a href="{{ route('manager.logout') }}" class="linkBtn">ログアウト</a>
         </div>

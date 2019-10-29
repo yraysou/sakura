@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use App\Models\User;
 use App\Models\Manager;
-use DB;
+use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 
 
@@ -63,7 +63,8 @@ class ManagerController extends Controller
         }
     }
 
-    public function delete($user_id) {
+    public function delete($user_id,$keyword = null) {
+        $manager_id = Auth::guard('manager')->user()->manager_id;
         $user = DB::table('users')
                         ->leftjoin(
                             'manager',
@@ -74,10 +75,33 @@ class ManagerController extends Controller
                         // exit;
         Storage::deleteDirectory("/public"."/".$user->store_name."/".$user->user_id);
         User::destroy($user_id);
-        $users = User::orderBy('created_at', 'desc')->get();
-        return view('manager.user_list', [
+
+        if(!empty($keyword))
+        {   
+            //  ユーザーから検索
+            $users = DB::table('users')
+                    ->where('user_id','like','%'.$keyword.'%')
+                    ->orwhere('name','like', '%'.$keyword.'%')
+                    ->orwhere('tel_number','like', '%'.$keyword.'%')
+                    ->where("manager_id",$manager_id)
+                    ->latest()
+                    ->get();
+
+        }else{//キーワードが未入力の場合
+            $users = DB::table('users')
+                    ->where("manager_id",$manager_id)
+                    ->latest()
+                    ->get();
+        }
+        //検索フォームへ
+        return view('manager/user_list',[
             'users' => $users,
-        ]);
+            'keyword' => $keyword,
+            ]);
+        // $users = User::orderBy('created_at', 'desc')->get();
+        // return view('manager.user_list', [
+        //     'users' => $users,
+        
     }
 
     public function managerList() {
@@ -93,5 +117,53 @@ class ManagerController extends Controller
         return view('manager.manager_list',[
             'managers' => $managers
         ]);
+    }
+
+    public function userListSearch(Request $request)
+    {
+        if(Auth::guard('manager')->check()) {
+            //キーワード取得
+            $keyword = $request->input('keyword');          
+            // マネージャーIDを取得
+            $manager_id = Auth::guard('manager')->user()->manager_id;
+            
+            //キーワード入力されている場合
+            if(!empty($keyword))
+            {   
+                //  ユーザーから検索
+                $users = DB::table('users')
+                        ->where('user_id','like','%'.$keyword.'%')
+                        ->orwhere('name','like', '%'.$keyword.'%')
+                        ->orwhere('tel_number','like', '%'.$keyword.'%')
+                        ->where("manager_id",$manager_id)
+                        // データ降順表示
+                        ->latest()
+                        ->get();
+
+            }else{//キーワードが未入力の場合
+                $users = DB::table('users')
+                        ->where("manager_id",$manager_id)
+                        // データ降順表示
+                        ->latest()
+                        ->get();
+            }
+            //検索フォームへ
+            return view('manager/user_list',[
+                'users' => $users,
+                'keyword' => $keyword,
+                ]);
+                
+        }else {
+            return redirect()->route('manager.loginpage');
+        }    
+    }
+
+    //  ユーザーデータ更新
+    public function userUpdate(Request $request){
+        $user = User::Where('user_id',$request->user_id)
+                            ->first();
+        $user->fill($request->all())->save();
+        return redirect()->route('user_detail',['id' => $user])
+                        ->with('flash_message', ' 更新が完了しました');
     }
 }
