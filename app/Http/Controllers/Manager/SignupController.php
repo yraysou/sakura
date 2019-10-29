@@ -113,7 +113,7 @@ class SignupController extends Controller
             $manager->store_name = $request->store_name;
             $manager->password = $request->password;
             $manager->save();
-            return redirect()->route('user_list');
+            return redirect()->route('manager_list');
         }else{
             return redirect()->route('manager.loginpage');
         }
