@@ -1,4 +1,7 @@
 @charset "UTF-8";
+.procedure{
+    display: none;
+}
 
 .photoArea {
     margin: 20px 0;
@@ -40,6 +43,11 @@
     font-weight: 700;
 }
 
+.left > h3 {
+    font-size: 2.1rem;
+    font-weight: 600;
+}
+
 .left > p {
     font-size: 2rem;
 }
@@ -71,7 +79,7 @@ form{
 .rightEle > p {
     text-align: right;
     font-weight: 700;
-    width: 35%;
+    width: 40%;
 }
 
 .rightEle > span{
@@ -105,3 +113,9 @@ form{
     color: white!important;
     background-color: #ff9900;
 }
+
+@media print {
+    .linkBtn{
+        display: none;
+    }
+}     

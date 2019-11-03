@@ -12,19 +12,29 @@
         height: 380px;
     }
     .photoArea {
-        margin: 0;
+        margin: 0 auto;
+        margin-left: 23%;
+        margin-right: 15%;
         text-align: center;
+        overflow-x: auto;
+        white-space: nowrap;
+        -webkit-overflow-scrolling: touch;
     }
     .photoEle {
+        /* 横スクロール */
+        display: inline-block;
         width: 100%;
+
+         /* 見た目調整 */
+        margin-right: 15%;
+        text-align: center;
     }
-    .printImg, .esImg {
+    /* .printImg, .esImg {
         display: none;
-    }
+    } */
     .bottomEle {
         display: block;
         margin: 15px auto;
-
     }
     .left {
         width: 100%;
@@ -40,17 +50,32 @@
         margin: 10px auto;
     }
     .right{
-        width: 100%;
+        text-align: center;
+        display: inline;
     }
+    .rightEle > p {
+        text-align: right;
+        font-weight: 900;
+        width: 35%;
+        font-size: 2.1rem;
+    }
+    
+    .rightEle > span{
+        background-color: white;
+        border-radius: 3px;
+        width: 65%;
+        height:78%;
+        font-size: 2.1rem;
+    }    
     .getWrapper {
         display:inline-block;
-        width: 100%;
+        width: 90%;
     } 
     .getList {
-        margin: 5px auto;
+        margin: 25px auto;
     }
     .getImage {
-        margin: 20px 0;
+        margin: 25px 0;
         width: 45%;
     }  
 } 

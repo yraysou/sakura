@@ -2,6 +2,7 @@
 
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{asset('/css/detail.css?cacherefResh19111')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('/css/detail_print.css?cacherefResh19111')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
@@ -9,6 +10,9 @@
 
 @section('main')    
     <div id="mainBlk" class="sideSpace">
+        <div class="procedure">
+            <img src="{{ asset('image/procedure.png') }}" alt="">
+        </div>
         <div class="photoArea">
             <div class="photoEle">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt=""><span>本データ</span>
@@ -27,6 +31,8 @@
                 <p>記載されているID、PassWordを入力し、ログインしたら</p>
                 <p>欲しい写真を選択し、</p>
                 <p>写真をダウンロードして下さい。</p>
+                <h3>※手順がわからない方は手順を見ながら</h3>
+                <h3>操作を進めてください。</h3>
                 <p>--------------------------------/</p>
                 <p class="fontRed">使用可能期限:<span>{{ $users->after_half_year }}</span><br/>
                 忘れずにデータを取得してください</p>

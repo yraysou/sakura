@@ -5,7 +5,7 @@
 ===================================*/
 #wrap{
   min-width: 320px;
-  padding-top: 50px;
+  padding-top: 30px;
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
@@ -19,7 +19,7 @@ mainBlk
   padding-bottom: 30px;
   position: relative;
   max-width: 1200px;
-  margin:auto;
+  margin: 0 auto;
   text-align: center;
   background-color:antiquewhite; 
 }
