@@ -25,7 +25,7 @@ class CreateUsersTable extends Migration
             $table->string('print')->nullable();
             $table->string('se')->nullable();
             $table->date('shooting_date');
-            $table->date('after_half_year');
+            $table->date('a_year_later');
             $table->integer('agreement_status')->default(0);           
             $table->rememberToken();
             $table->timestamps();

@@ -29,7 +29,7 @@ class User extends Authenticatable
         'print',
         'se',
         'shooting_date',
-        'after_half_year',
+        'a_year_later',
         'agreement_status',
         'tel_number'
     ];

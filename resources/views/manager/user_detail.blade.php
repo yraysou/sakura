@@ -34,7 +34,7 @@
                 <h3>※手順がわからない方は手順を見ながら</h3>
                 <h3>操作を進めてください。</h3>
                 <p>--------------------------------/</p>
-                <p class="fontRed">使用可能期限:<span>{{ $users->after_half_year }}</span><br/>
+                <p class="fontRed">使用可能期限:<span>{{ $users->a_year_later }}</span><br/>
                 忘れずにデータを取得してください</p>
             </div>
         <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post">
