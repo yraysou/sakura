@@ -157,7 +157,7 @@ class ManagerController extends Controller
             return redirect()->route('manager.loginpage');
         }    
     }
-
+    
     //  ユーザーデータ更新
     public function userUpdate(Request $request){
         $user = User::Where('user_id',$request->user_id)

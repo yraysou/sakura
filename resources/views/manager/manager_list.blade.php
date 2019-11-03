@@ -19,11 +19,13 @@
                     @if (count($managers))
                         <tbody>
                             @foreach ($managers as $manager)
-                                <tr class="record">
-                                    <th score="row">{{$manager->store_name}}</th>
-                                    <td>{{$manager->password}}</td>        
-                                    <td><a class ="lineHeight fontRed" href="{{ '/manager/delete_manager'.'/'.$manager->manager_id }}">削除</a></td>
-                                </tr> 
+                                @if($manager ->manager_id != 1)
+                                    <tr  class="record">
+                                        <th score="row">{{$manager->store_name}}</th>
+                                        <td>{{$manager->password}}</td>        
+                                        <td><a class ="lineHeight fontRed" href="{{ '/manager/delete_manager'.'/'.$manager->manager_id }}">削除</a></td>
+                                    </tr> 
+                                @endif
                             @endforeach
                         </tbody>
                     @else
