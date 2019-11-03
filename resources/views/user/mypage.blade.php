@@ -2,7 +2,6 @@
 
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{asset('/css/mypage.css?cacherefResh19111')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('/css/detail.css?cacherefResh19111')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/user_sp.css?cacherefResh19111')}}">
 @endsection
 
@@ -43,7 +42,10 @@
                 <div class="rightEle">
                     <p>撮影日:</p><span>{{ $users->shooting_date }}</span>
                 </div> 
-            </div>
+                <div class="rightEle">
+                    <p> 電話番号:</p><span>{{ $users->tel_number }}</span>
+                </div>
+            </div>     
         </div>
         <div class="getWrapper">
             <select class="getList">
