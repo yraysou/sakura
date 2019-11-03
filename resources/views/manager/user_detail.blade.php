@@ -50,7 +50,7 @@
                             <p>Password:</p> <span>{{ $users->conf_pass }}</span>
                         </div>
                         <div class="rightEle">
-                            <p>氏名:</p><input type="text" name="name" value="{{ $users->name }}">
+                            <p>氏名:</p> <span>{{ $users->name }}</span>
                         </div>
                         <div class="rightEle">
                             <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}">
