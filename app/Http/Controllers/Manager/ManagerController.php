@@ -33,23 +33,6 @@ class ManagerController extends Controller
         }
     }
 
-    //ユーザの一覧を取得
-    public function show() {
-        if(Auth::guard('manager')->check()) {
-            $manager_id = Auth::guard('manager')->user()->manager_id;
-            //全てのデータを取得する
-            $users = User::orderBy('created_at', 'desc')
-                ->where("manager_id",$manager_id)
-                ->get();
-            return view('manager.user_list', [
-                'users' => $users,
-            ]);
-        }else {
-            return redirect()->route('manager.loginpage');
-        }
-        
-    }
-
     public function detail($user_id) {
         if(Auth::guard('manager')->check()) {
             $users = User::find($user_id);
