@@ -49,20 +49,20 @@
                             </script>
                             
                         <div class="rightEle">
-                            <p>ID:</p> <span>{{ $users->user_id }}</span>
+                            <p>ID:</p> <span class="rightEle__detail">{{ $users->user_id }}</span>
                             <input type="hidden" value="{{ $users->user_id }}" name="user_id">
                         </div>
                         <div class="rightEle">
-                            <p>Password:</p> <span>{{ $users->conf_pass }}</span>
+                            <p>Password:</p> <span class="rightEle__detail">{{ $users->conf_pass }}</span>
                         </div>
                         <div class="rightEle">
-                            <p>氏名:</p> <span>{{ $users->name }}</span>
+                            <p>氏名:</p> <span class="rightEle__detail">{{ $users->name }}</span>
                         </div>
                         <div class="rightEle">
-                            <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}">
+                            <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}"><span class="small_msg">修正可</span>
                         </div>    
                         <div class="rightEle">
-                            <p>撮影日:</p><input type="text"  name="shooting_date" value="{{ $users->shooting_date }}">
+                            <p>撮影日:</p><input type="text"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
                         </div>    
                         <input  type="submit" class="linkBtn"  value="更新" name="update">            
                     </div>
