@@ -17,7 +17,7 @@
 .photoEle > img {
     margin: 0 auto;
     display: block;
-    height: 250px;
+    height: 22vw;
     object-fit: cover;
 }
 
