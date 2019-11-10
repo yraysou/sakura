@@ -31,7 +31,7 @@
                 <p>欲しい写真を選択し、</p>
                 <p>写真をダウンロードして下さい。</p>
                 <p>--------------------------------/</p>
-                <p class="fontRed">使用可能期限:<span class="year">{{ $users->after_half_year }}</span><br/>
+                <p class="fontRed">使用可能期限:<span class="year">{{ $users->a_year_later }}</span><br/>
                 忘れずにデータを取得してください</p>
             </div>
             <div class="right">
@@ -60,7 +60,6 @@
                 class="getImage" 
                 id=""
                 href="" 
-                download=""
             >ダウンロードする
             </a>
         </div>

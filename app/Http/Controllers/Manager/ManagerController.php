@@ -33,23 +33,6 @@ class ManagerController extends Controller
         }
     }
 
-    //ユーザの一覧を取得
-    public function show() {
-        if(Auth::guard('manager')->check()) {
-            $manager_id = Auth::guard('manager')->user()->manager_id;
-            //全てのデータを取得する
-            $users = User::orderBy('created_at', 'desc')
-                ->where("manager_id",$manager_id)
-                ->get();
-            return view('manager.user_list', [
-                'users' => $users,
-            ]);
-        }else {
-            return redirect()->route('manager.loginpage');
-        }
-        
-    }
-
     public function detail($user_id) {
         if(Auth::guard('manager')->check()) {
             $users = User::find($user_id);
@@ -162,7 +145,10 @@ class ManagerController extends Controller
     public function userUpdate(Request $request){
         $user = User::Where('user_id',$request->user_id)
                             ->first();
-        $user->fill($request->all())->save();
+        $after_half_year = Carbon::parse($request->shooting_date)->addYear();
+        $user->fill($request->all());
+        $user->after_half_year = $after_half_year;
+        $user->save();
         return redirect()->route('user_detail',['id' => $user])
                         ->with('flash_message', ' 更新が完了しました');
     }

@@ -17,7 +17,7 @@
 .photoEle > img{
     margin: 0 auto;
     display: block;
-    height: 250px;
+    height: 22vw;
     object-fit: cover;
 }
 
@@ -39,17 +39,17 @@
 }
 
 .left > h2 {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     font-weight: 700;
 }
 
 .left > h3 {
-    font-size: 2.1rem;
+    font-size: 1.8vw;
     font-weight: 600;
 }
 
 .left > p {
-    font-size: 2rem;
+    font-size: 1.9vw;
 }
 
 form{
@@ -72,7 +72,7 @@ form{
 .rightEle {
     display: flex;
     height: 37px;
-    font-size: 2.8rem;
+    font-size: 2.8vw;
     margin-top: 7px;
 }
 
@@ -86,16 +86,23 @@ form{
     width: 40%;
 }
 
-.rightEle > span{
+.rightEle__detail{
+    display: block;
     background-color: white;
     border-radius: 3px;
-    width: 65%;
+    width: 55%;
+}
+.small_msg{
+    font-size: 1.2rem;
+    color: red;
+    width: 5%;
+    font-weight: bold;
 }
 
 .rightEle > input{
     background-color: white!important;
     border-radius: 3px!important;
-    width: 65%;
+    width: 60%;
     font-size: 2.4rem;
     text-align: center;
 }
