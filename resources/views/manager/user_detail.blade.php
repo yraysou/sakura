@@ -21,7 +21,7 @@
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt=""><span>印刷用データ</span>
             </div>
             <div class="photoEle se">
-                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt=""><span>SE用データ</span>
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt=""><span>ES用データ</span>
             </div>
         </div>
         <div class="bottomEle">
