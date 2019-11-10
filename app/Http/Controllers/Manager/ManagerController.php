@@ -145,9 +145,9 @@ class ManagerController extends Controller
     public function userUpdate(Request $request){
         $user = User::Where('user_id',$request->user_id)
                             ->first();
-        $after_half_year = Carbon::parse($request->shooting_date)->addYear();
+        $a_year_later = Carbon::parse($request->shooting_date)->addYear();
         $user->fill($request->all());
-        $user->after_half_year = $after_half_year;
+        $user->a_year_later = $a_year_later;
         $user->save();
         return redirect()->route('user_detail',['id' => $user])
                         ->with('flash_message', ' 更新が完了しました');
