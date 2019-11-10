@@ -156,6 +156,10 @@ form{
     font-weight: 800;
 }
 
+.year{
+    font-size: 2.9rem;
+}
+
 .linkBtn{
     display: inline-block;
     width: 150px;
@@ -166,4 +170,9 @@ form{
     text-align: center;
     color: white!important;
     background-color: #ff9900;
+}
+
+a.disabled{
+    pointer-events: none;
+    opacity: 0.4;
 }
