@@ -67,7 +67,7 @@ class LoginController extends Controller
             ->first();
             // dd($manager);
         if($manager){
-            Auth::guard('manager')->login($manager);
+            Auth::guard('manager')->login($manager, true);
             if($manager->manager_id == 1){
                 return redirect()->route('manager_list');
             }else{
