@@ -11,16 +11,16 @@
 @section('main')    
     <div id="mainBlk" class="sideSpace">
         <div class="procedure">
-            <img src="{{ asset('image/procedure.png') }}" alt="">
+            <img src="{{ asset('image/pro.png') }}" alt="">
         </div>
         <div class="photoArea">
-            <div class="photoEle">
+            <div class="photoEle original">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt=""><span>本データ</span>
             </div>
-            <div class="photoEle">
+            <div class="photoEle print">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt=""><span>印刷用データ</span>
             </div>
-            <div class="photoEle">
+            <div class="photoEle se">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt=""><span>SE用データ</span>
             </div>
         </div>
@@ -34,7 +34,7 @@
                 <h3>※手順がわからない方は手順を見ながら</h3>
                 <h3>操作を進めてください。</h3>
                 <p>--------------------------------/</p>
-                <p class="fontRed">使用可能期限:<span>{{ $users->after_half_year }}</span><br/>
+                <p class="fontRed">使用可能期限:<span class="year">{{ $users->a_year_later }}</span><br/>
                 忘れずにデータを取得してください</p>
             </div>
         <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post">
@@ -49,20 +49,20 @@
                             </script>
                             
                         <div class="rightEle">
-                            <p>ID:</p> <span>{{ $users->user_id }}</span>
+                            <p>ID:</p> <span class="rightEle__detail">{{ $users->user_id }}</span>
                             <input type="hidden" value="{{ $users->user_id }}" name="user_id">
                         </div>
                         <div class="rightEle">
-                            <p>Password:</p> <span>{{ $users->conf_pass }}</span>
+                            <p>Password:</p> <span class="rightEle__detail">{{ $users->conf_pass }}</span>
                         </div>
                         <div class="rightEle">
-                            <p>氏名:</p><input type="text" name="name" value="{{ $users->name }}">
+                            <p>氏名:</p> <span class="rightEle__detail">{{ $users->name }}</span>
                         </div>
                         <div class="rightEle">
-                            <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}">
+                            <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}"><span class="small_msg">修正可</span>
                         </div>    
                         <div class="rightEle">
-                            <p>撮影日:</p><input type="text"  name="shooting_date" value="{{ $users->shooting_date }}">
+                            <p>撮影日:</p><input type="text"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
                         </div>    
                         <input  type="submit" class="linkBtn"  value="更新" name="update">            
                     </div>
