@@ -7,6 +7,27 @@
   font-size: 2rem;
 }
 
+.idArea{
+  width: 40%!important;
+  font-size: 2rem;
+}
+
+.must{
+  width: 10%;
+  background: #FF1A00;
+  color: #FFF;
+	border-radius: 3px;
+	font-size: 13px;
+	padding:0.51x 0.1px;
+  letter-spacing: 1px;
+  font-weight:550;
+}
+
+.must p{
+  margin-left: 8px;
+  margin-top: 4px;
+}
+
 .input-column {
   display:flex;
   margin-bottom: 5px;
@@ -45,17 +66,23 @@
 
 .drop {
     height: 270px;
-    width: 230px;
-    line-height: 200px;
-    overflow: hidden;
+    width: 80%;
+    /* line-height: 200px; */
+    overflow: auto;
     background: #ffc457;
     border: 3px #ff9900 dashed;
-    color: #ff9900;
-    font-size: 3.5rem;
+    color: #ffa600;
+    font-size:3.5rem;
     font-weight: bold;
     text-align: center;
     cursor: default;
     margin: 0 auto;
+  }
+
+  .drop p{
+    line-height: 20px;
+    font-size:1.8rem;
+    font-weight: bold;
   }
   
   #drop1.dragover, #drop2.dragover, #drop3.dragover,

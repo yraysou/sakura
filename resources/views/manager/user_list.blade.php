@@ -12,7 +12,7 @@
                         <form class="form-inline" action="{{url('manager/user_list')}}">
                             <div class="search-group">
                                 <div>
-                                    <input type="text" name="keyword" value="{{ $keyword }}" placeholder=" ユーザー名を入力" class="typeBtn">
+                                    <input type="text" name="keyword" value="{{ $keyword }}" placeholder="   お客様検索   （ id / 名前 / 電話番号 ）" class="typeBtn">
                                 </div>
                                 <div>
                                     <input type="submit" value="検索" class="searchBtn">

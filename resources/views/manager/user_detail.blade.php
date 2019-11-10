@@ -11,16 +11,16 @@
 @section('main')    
     <div id="mainBlk" class="sideSpace">
         <div class="procedure">
-            <img src="{{ asset('image/procedure.png') }}" alt="">
+            <img src="{{ asset('image/pro.png') }}" alt="">
         </div>
         <div class="photoArea">
-            <div class="photoEle">
+            <div class="photoEle original">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt=""><span>本データ</span>
             </div>
-            <div class="photoEle">
+            <div class="photoEle print">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt=""><span>印刷用データ</span>
             </div>
-            <div class="photoEle">
+            <div class="photoEle se">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt=""><span>SE用データ</span>
             </div>
         </div>
@@ -34,7 +34,7 @@
                 <h3>※手順がわからない方は手順を見ながら</h3>
                 <h3>操作を進めてください。</h3>
                 <p>--------------------------------/</p>
-                <p class="fontRed">使用可能期限:<span>{{ $users->a_year_later }}</span><br/>
+                <p class="fontRed">使用可能期限:<span class="year">{{ $users->a_year_later }}</span><br/>
                 忘れずにデータを取得してください</p>
             </div>
         <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post">
