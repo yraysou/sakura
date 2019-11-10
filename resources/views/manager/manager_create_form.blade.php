@@ -6,8 +6,9 @@
 
 @section('main')
     <div id="mainBlk" class="sideSpace">
-        <div class="head sideSpace">店舗登録画面</div>
-
+        <div class="head sideSpace">
+            <p>店舗登録画面</p>
+        </div>
         <div class="form-body">
             <form class="form-horizontal" method="POST" action="{{ route('manager.create') }}">
                 {{ csrf_field() }}
@@ -15,7 +16,7 @@
                 <div class="form-group">
                     <label for="store_name" class="input-title">スタジオ</label>
                     <div class="input-group">
-                        <input id="store_name" type="text" class="" name="store_name" required>
+                        <input id="store_name"   placeholder="スタジオ名" type="text" class="" name="store_name" required>
                         @if ($errors->has('store_name'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('store_name') }}</strong>
@@ -27,7 +28,7 @@
                 <div class="form-group">
                     <label for="password" class="input-title">Password</label>
                     <div class="input-group">
-                        <input id="password" type="password" class="" name="password" required>
+                        <input id="password" placeholder="Password" type="password" class="" name="password" required>
 
                         @if ($errors->has('password'))
                             <span class="help-block">

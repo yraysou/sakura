@@ -37,7 +37,7 @@ class Kernel extends ConsoleKernel
                             ->leftjoin(
                                 'manager',
                                 'users.manager_id','=','manager.manager_id')
-                            ->where('after_half_year','<=',$today)
+                            ->where('a_year_later','<=',$today)
                             ->get();
             foreach ($users as $user) {
                 Storage::deleteDirectory("/public"."/".$user->store_name."/".$user->user_id);

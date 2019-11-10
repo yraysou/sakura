@@ -8,6 +8,7 @@
     text-align: center;
 }
 
+
 .unShow {
     display: none;
 }
@@ -43,7 +44,7 @@
 
 .btn-list{
     margin: 0 auto;
-    margin-top: 15px;
+    margin-top: 6%;
     width: 65%;
 }
 
@@ -61,5 +62,13 @@
 
 input.disabled{
     pointer-events: none;
-    opacity: 0.4;
+    opacity: 0.6;
+}
+
+#mainBlk{
+    padding-bottom: 80px!important;
+}
+
+#wrap{
+    padding-top: 0px!important;
 }

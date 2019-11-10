@@ -9,12 +9,59 @@
 
     .procedure{
         display: inline;
+
     }
 
     .procedure img{
-        margin-top: 5%;
-        widows: 100%;
-        margin-right: 20%;
-        margin-bottom: 27%;
+        height:650px;
+        width: 75%;
+        margin-top: -50px;
     }
+
+    left h3{
+        text-align: none;
+    }
+
+    .photoEle > img{
+        height: 90px;
+    }
+
+    .rightEle{
+        font-size: 20px;
+        margin-top: -5px;
+        font-weight: 600;
+    }
+
+    .rightEle > input{
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+
+    .rightEle > span{
+        font-size: 15px;
+    }
+
+    .year{
+        font-size: 2rem;
+    }
+
+    .left > h2 {
+        font-size: 2rem;
+        font-weight: 700;
+    }
+    
+    .left > h3 {
+        font-size: 0.1px;
+        font-weight: 600;
+        text-indent:100%;
+        overflow:hidden;
+        white-space:nowrap;
+    }
+    
+    .left > p {
+        font-size: 1.6rem;
+    }
+    
+    
 }     

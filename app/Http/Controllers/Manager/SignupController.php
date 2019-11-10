@@ -69,9 +69,9 @@ class SignupController extends Controller
                 $user->se = $request->file('se')->store('public/'.$store_name."/".$userId);
             }
 
-            $after_half_year = Carbon::parse($request->shooting_date)->addMonth(6);
+            $a_year_later = Carbon::parse($request->shooting_date)->addYear();
             $user->shooting_date = $request->shooting_date;
-            $user->after_half_year = $after_half_year;
+            $user->a_year_later = $a_year_later;
             $user->save();
 
             

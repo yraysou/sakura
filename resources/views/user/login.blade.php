@@ -7,16 +7,18 @@
 
 @section('main')
     <div id="mainBlk" class="sideSpace">
-        <div class="head sideSpace">ユーザーログイン</div>
-
+        <div class="head sideSpace">
+            <h2>画像ダウンロード</h2>
+            <p>お客様ログイン</p>
+        </div>
         <div class="form-body">
             <form class="form-horizontal" method="POST" action="{{ route('user.login') }}">
                 {{ csrf_field() }}
                 {{-- store_name --}}
                 <div class="form-group">
-                    <label for="user_id" class="input-title">ユーザーID</label>
+                    <label for="user_id" class="input-title">お客様ID</label>
                     <div class="input-group">
-                        <input id="user_id" type="text" class="form-control" name="user_id" value="{{ old('user_id') }}" required autofocus>
+                        <input id="user_id" type="text" class="form-control" placeholder="ID" name="user_id" value="{{ old('user_id') }}" required autofocus>
                         @if ($errors->has('user_id'))
                             <span class="help-block">
                                 <strong>{{ $errors->first('user_id') }}</strong>
@@ -28,7 +30,7 @@
                 <div class="form-group">
                     <label for="password" class="input-title">Password</label>
                     <div class="input-group">
-                        <input id="password" type="password" class="" name="password" required>
+                        <input id="password" placeholder="Password" type="password" class="form-control" name="password" required>
 
                         @if ($errors->has('password'))
                             <span class="help-block">
