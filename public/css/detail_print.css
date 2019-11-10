@@ -15,7 +15,7 @@
     .procedure img{
         height:650px;
         width: 75%;
-        margin-top: -20px;
+        margin-top: -50px;
     }
 
     left h3{
@@ -27,15 +27,23 @@
     }
 
     .rightEle{
-        font-size: 1.8rem;
+        font-size: 20px;
+        margin-top: -5px;
+        font-weight: 600;
     }
 
-    .right > input{
-        font-size: 1px!important;    
+    .rightEle > input{
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+
+    .rightEle > span{
+        font-size: 15px;
     }
 
     .year{
-        font-size: 2.6rem;
+        font-size: 2rem;
     }
 
     .left > h2 {
@@ -44,7 +52,7 @@
     }
     
     .left > h3 {
-        font-size: 0.5rem;
+        font-size: 0.1px;
         font-weight: 600;
         text-indent:100%;
         overflow:hidden;

@@ -52,34 +52,34 @@
             <div class="imageArea">
                 <div class="image">
                     <div id="drop1" class="drop">
-                        Drop or Click!!<br><br>
-                        <p>/--------------------------</p>
-                        <p>登録する写真をこちらに</p>
-                        <p>Drop or Clickして下さい。</p>
-                        <p>--------------------------/</p>              
+                        <br><br><br><br>
+                        /--------------------------<br>
+                        登録する写真をこちらに<br>
+                        Drop or Clickして下さい。<br>
+                        --------------------------/             
                     </div>
                     <input type="file" class="fileInput" id="fileInput1" name="original" style="display:none"><span>本データ</span>
                 </div>
                 <div class="image">
-                        <div id="drop2" class="drop">
-                                Drop or Click!!!<br><br>
-                                <p>/--------------------------</p>
-                                <p>登録する写真をこちらに</p>
-                                <p>Drop or Clickして下さい。</p>
-                                <p>--------------------------/</p>              
-                            </div>
-                            <input type="file" class="fileInput" id="fileInput1" name="print" style="display:none"><span>印刷用データ</span>
-                        </div>
+                    <div id="drop2" class="drop">
+                        <br><br><br><br>
+                        /--------------------------<br>
+                        登録する写真をこちらに<br>
+                        Drop or Clickして下さい。<br>
+                        --------------------------/             
+                    </div>
+                    <input type="file" class="fileInput" id="fileInput1" name="print" style="display:none"><span>印刷用データ</span>
+                </div>
                 <div class="image">
                         <div id="drop3" class="drop">
-                                Drop or Click!!!<br><br>
-                                <p>/--------------------------</p>
-                                <p>登録する写真をこちらに</p>
-                                <p>Drop or Clickして下さい。</p>
-                                <p>--------------------------/</p>              
-                            </div>
-                            <input type="file" class="fileInput" id="fileInput1" name="se" style="display:none"><span>ESデータ</span>
+                            <br><br><br><br>
+                            /--------------------------<br>
+                            登録する写真をこちらに<br>
+                            Drop or Clickして下さい。<br>
+                            --------------------------/             
                         </div>
+                        <input type="file" class="fileInput" id="fileInput1" name="se" style="display:none"><span>ESデータ</span>
+                </div>
             </div>
             <input type="submit" class="sendButton insertBtn" value="保存">
         </form>

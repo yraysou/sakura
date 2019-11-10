@@ -67,12 +67,12 @@
 .drop {
     height: 270px;
     width: 80%;
-    /* line-height: 200px; */
+    line-height: 20px;
     overflow: auto;
     background: #ffc457;
     border: 3px #ff9900 dashed;
     color: #ffa600;
-    font-size:3.5rem;
+    font-size:2rem;
     font-weight: bold;
     text-align: center;
     cursor: default;
