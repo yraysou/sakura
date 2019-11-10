@@ -3,10 +3,16 @@
 /*===================================
  head
 ===================================*/
-.head{
-    margin-top: 50px;
+.head h2{
+    font-size: 25px;
+    font-weight:700;
+    margin-bottom: 1%;
 }
 
+.head p{
+    font-size: 20px;
+    margin-bottom: 5px;
+}
 
 /*===================================
  form
@@ -22,6 +28,10 @@
 .input-title{
     font-size:1.8rem;
     font-weight: bold;
+}
+
+.form-control{
+    
 }
 
 .form-horizontal{

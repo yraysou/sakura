@@ -26,16 +26,24 @@
             {{ csrf_field() }}
             <div class="input-area">
                 <div class="input-column">
-                    <p class="column-left">ID: </p><span class="column-right">{{ $user_id }}</span>
+                    <span  hidden class="must"></span>
+                    <p class="column-left idArea">ID: </p>
+                    <span class="column-right">{{ $user_id }}</span>
                 </div>
                 <div class="input-column">
-                    <p class="column-left">氏名: </p><span class="column-right"><input class="column-name" type="text" vaule="" id="name" name="name"></span>
+                    <span class="must"><p>必須</p></span>
+                    <p class="column-left">氏名: </p>
+                    <span class="column-right"><input class="column-name" type="text" vaule="" id="name" name="name"></span>
                 </div>
                 <div class="input-column">
-                    <p class="column-left">電話番号: </p><span class="column-right"><input class="column-name" type="text" vaule="" id="tel_number" name="tel_number" placeholder="例）000-0000-0000"></span>
+                    <span class="must"><p>必須</p></span>
+                    <p class="column-left">電話番号: </p>
+                    <span class="column-right"><input class="column-name" type="text" vaule="" id="tel_number" name="tel_number" placeholder="例）000-0000-0000"></span>
                 </div>
                 <div class="input-column">
-                <p class="column-left">撮影日時: </p><span class="column-right"><input class="column-name" type="date" vaule="{{ $dt }}" id="shooting_date" name="shooting_date"></span>
+                    <span class="must"><p>必須</p></span>
+                    <p class="column-left">撮影日時: </p>
+                    <span class="column-right"><input class="column-name" type="date" vaule="{{ $dt }}" id="shooting_date" name="shooting_date"></span>
                 </div>
                 <input type="hidden" id="user_id" name="user_id" value="{{ $user_id }}">
                 <input type="hidden" id="manager_id" name="manager_id" value="{{ $manager_id }}">
@@ -43,17 +51,35 @@
             </div>
             <div class="imageArea">
                 <div class="image">
-                    <div id="drop1" class="drop">Drop or Click!!</div>
+                    <div id="drop1" class="drop">
+                        Drop or Click!!<br><br>
+                        <p>/--------------------------</p>
+                        <p>登録する写真をこちらに</p>
+                        <p>Drop or Clickして下さい。</p>
+                        <p>--------------------------/</p>              
+                    </div>
                     <input type="file" class="fileInput" id="fileInput1" name="original" style="display:none"><span>本データ</span>
                 </div>
                 <div class="image">
-                    <div id="drop2" class="drop">Drop or Click!!</div>
-                    <input type="file" class="fileInput" id="fileInput2" name="print" style="display:none"><span>写真用データ</span>
-                </div>
+                        <div id="drop2" class="drop">
+                                Drop or Click!!!<br><br>
+                                <p>/--------------------------</p>
+                                <p>登録する写真をこちらに</p>
+                                <p>Drop or Clickして下さい。</p>
+                                <p>--------------------------/</p>              
+                            </div>
+                            <input type="file" class="fileInput" id="fileInput1" name="print" style="display:none"><span>印刷用データ</span>
+                        </div>
                 <div class="image">
-                    <div id="drop3" class="drop">Drop or Click!!</div>
-                    <input type="file" class="fileInput" id="fileInput3" name="se" style="display:none"><span>ESデータ</span>
-                </div>
+                        <div id="drop3" class="drop">
+                                Drop or Click!!!<br><br>
+                                <p>/--------------------------</p>
+                                <p>登録する写真をこちらに</p>
+                                <p>Drop or Clickして下さい。</p>
+                                <p>--------------------------/</p>              
+                            </div>
+                            <input type="file" class="fileInput" id="fileInput1" name="se" style="display:none"><span>ESデータ</span>
+                        </div>
             </div>
             <input type="submit" class="sendButton insertBtn" value="保存">
         </form>

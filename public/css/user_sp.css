@@ -2,7 +2,7 @@
     #wrap {
         padding-top: 0;
         background-color: antiquewhite;
-        height: 100vh;
+        height: 90vh;
     }
     .sendButton, input[type="submit"].sendButton {
         width: 170px;
@@ -14,7 +14,7 @@
     .photoArea {
         margin: 0 auto;
         margin-left: 23%;
-        margin-right: 15%;
+        margin-right: 19%;
         text-align: center;
         overflow-x: auto;
         white-space: nowrap;
@@ -34,7 +34,7 @@
     } */
     .bottomEle {
         display: block;
-        margin: 15px auto;
+        margin: 0 auto;
     }
     .left {
         width: 100%;
@@ -47,7 +47,7 @@
         font-size: 1.5rem;
     }
     .fontRed {
-        margin: 10px auto;
+        margin: 5px auto;
     }
     .right{
         text-align: center;
@@ -58,6 +58,10 @@
         font-weight: 900;
         width: 35%;
         font-size: 2.1rem;
+    }
+
+    .rightEle{
+        margin-top: -1px;
     }
     
     .rightEle > span{
