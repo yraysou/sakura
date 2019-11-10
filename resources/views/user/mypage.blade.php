@@ -29,7 +29,7 @@
                 <p>欲しい写真を選択し、</p>
                 <p>写真をダウンロードして下さい。</p>
                 <p>--------------------------------/</p>
-                <p class="fontRed">使用可能期限:{{ $users->after_half_year }}<br/>
+                <p class="fontRed">使用可能期限:{{ $users->a_year_later }}<br/>
                 忘れずにデータを取得してください</p>
             </div>
             <div class="right">
