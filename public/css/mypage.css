@@ -95,16 +95,16 @@
 }
 
 .left {
-    width: 60%;
+    width: 50%;
 }
 
 .left > h2 {
-    font-size: 2.5rem;
+    font-size: 2.5vw;
     font-weight: 700;
 }
 
 .left > p {
-    font-size: 2rem;
+    font-size: 1.8vw;
 }
 
 form{
@@ -112,8 +112,7 @@ form{
 }
 
 .right {
-    width: 100%;
-    margin-left: 15%;
+    width: 50%;
 }
 .right > input {
     margin-top: 3%;

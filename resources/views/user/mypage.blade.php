@@ -7,8 +7,7 @@
 
 @section('js')
     <script type="text/javascript" src="{{asset('/js/getImage.js?cacherefResh19111')}}"></script>
-    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script type="text/javascript" src="{{asset('/js/agreement.js?cacherefResh19111')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/jquery-1.11.3.min.js')}}"></script>
 @endsection
 
 @section('main')
@@ -51,14 +50,14 @@
         </div>
         <div class="getWrapper">
             <select class="getList" id="" onchange="">
-                <option selected="selected"  hidden>写真を選択して下さい</option>
+                <option selected="selected"  hidden value="">写真を選択して下さい</option>
                 <option class="original" value="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt="">本データ</option>
                 <option class="print" value="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt="">写真印刷用</option>
                 <option class="es" value="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt="">ES用</option>
             </select>
             <a 
                 class="getImage" 
-                id=""
+                id="getImage"
                 href="" 
             >ダウンロードする
             </a>
