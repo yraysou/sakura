@@ -18,7 +18,7 @@
 
 Route::get('/user', 'User\Auth\LoginController@showLoginForm')->name('user.loginpage');
 
-Route::post('/user/login', 'User\Auth\LoginController@login')->name('user.login');
+Route::post('/user/login', 'User\Auth\LoginController@authenticate')->name('user.login');
 
 Route::get('/user/logout', 'User\Auth\LoginController@logout')->name('user.logout');
 
