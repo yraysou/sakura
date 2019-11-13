@@ -10,9 +10,7 @@
 
 @section('main')    
     <div id="mainBlk" class="sideSpace">
-        <div class="procedure">
-            <img src="{{ asset('image/pro.png') }}" alt="">
-        </div>
+        <div class="allContents">
         <div class="photoArea">
             <div class="photoEle original">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt=""><span>本データ</span>
@@ -58,16 +56,20 @@
                         <div class="rightEle">
                             <p>氏名:</p> <span class="rightEle__detail">{{ $users->name }}</span>
                         </div>
-                        <div class="rightEle">
+                        <div class="rightEle tel">
                             <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}"><span class="small_msg">修正可</span>
                         </div>    
                         <div class="rightEle">
                             <p>撮影日:</p><input type="text"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
                         </div>    
                         <input  type="submit" class="linkBtn"  value="更新" name="update">            
-                    </div>
-            </form>    
+                </div>
+        </form>  
         </div>
+        </div>
+        <div class="procedure">
+            <img src="{{ asset('image/pro.png') }}" alt="">
+        </div>    
         <div class="linkList">
             <a class="linkBtn" href="#" onclick="window.print();return false;">このページを印刷</a>
             <a class="linkBtn" href="/manager/user_list">一覧へ戻る</a>

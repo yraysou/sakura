@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 .photoArea {
     display: flex;
 }
@@ -26,6 +25,7 @@
     position: relative;
     width: 40%;
     margin: 10px auto;
+    margin-left: 32%;
     display: flex!important;
 }
 .getList {
