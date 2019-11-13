@@ -13,6 +13,7 @@
         <div class="procedure">
             <img src="{{ asset('image/pro.png') }}" alt="">
         </div>
+        <div>{!! QrCode::size(160)->generate(Request::url()); !!}</div>
         <div class="photoArea">
             <div class="photoEle original">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt=""><span>本データ</span>
