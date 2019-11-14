@@ -22,51 +22,52 @@
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt=""><span>ES用データ</span>
             </div>
         </div>
-        <div class="bottomEle">
-            <div class="left">
-                <h2>画像取得方法の説明</h2>
-                <p>/--------------------------------</p>
-                <p>記載されているID、PassWordを入力し、ログインしたら</p>
-                <p>欲しい写真を選択し、</p>
-                <p>写真をダウンロードして下さい。</p>
-                <h3>※手順がわからない方は手順を見ながら</h3>
-                <h3>操作を進めてください。</h3>
-                <p>--------------------------------/</p>
-                <p class="fontRed">使用可能期限:<span class="year">{{ $users->a_year_later }}</span><br/>
-                忘れずにデータを取得してください</p>
-            </div>
-        <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post">
-                {{ csrf_field() }}
-                    <div class="right">
-                            <script>
-                                @if (session('flash_message'))
-                                    $(function () {
-                                            toastr.success('{{ session('flash_message') }}');
-                                    });
-                                @endif
-                            </script>
-                            
-                        <div class="rightEle">
-                            <p>ID:</p> <span class="rightEle__detail">{{ $users->user_id }}</span>
-                            <input type="hidden" value="{{ $users->user_id }}" name="user_id">
-                        </div>
-                        <div class="rightEle">
-                            <p>Password:</p> <span class="rightEle__detail">{{ $users->conf_pass }}</span>
-                        </div>
-                        <div class="rightEle">
-                            <p>氏名:</p> <span class="rightEle__detail">{{ $users->name }}</span>
-                        </div>
-                        <div class="rightEle tel">
-                            <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}"><span class="small_msg">修正可</span>
-                        </div>    
-                        <div class="rightEle">
-                            <p>撮影日:</p><input type="text"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
-                        </div>    
-                        <input  type="submit" class="linkBtn"  value="更新" name="update">            
+            <div class="bottomEle">
+                <div class="left">
+                    <h2>画像取得方法の説明</h2>
+                    <p>/--------------------------------</p>
+                    <p>記載されているID、PassWordを入力し、ログインしたら</p>
+                    <p>欲しい写真を選択し、</p>
+                    <p>写真をダウンロードして下さい。</p>
+                    <h3>※手順がわからない方は手順を見ながら</h3>
+                    <h3>操作を進めてください。</h3>
+                    <p>--------------------------------/</p>
+                    <p class="fontRed">使用可能期限:<span class="year">{{ $users->a_year_later }}</span><br/>
+                    忘れずにデータを取得してください</p>
                 </div>
-        </form>  
-        </div>
-        </div>
+                    <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post">
+                            {{ csrf_field() }}
+                                <div class="right">
+                                        <script>
+                                            @if (session('flash_message'))
+                                                $(function () {
+                                                        toastr.success('{{ session('flash_message') }}');
+                                                });
+                                            @endif
+                                        </script>
+                                        
+                                    <div class="rightEle">
+                                        <p>ID:</p> <span class="rightEle__detail">{{ $users->user_id }}</span>
+                                        <input type="hidden" value="{{ $users->user_id }}" name="user_id">
+                                    </div>
+                                    <div class="rightEle">
+                                        <p>Password:</p> <span class="rightEle__detail">{{ $users->conf_pass }}</span>
+                                    </div>
+                                    <div class="rightEle">
+                                        <p>氏名:</p> <span class="rightEle__detail">{{ $users->name }}</span>
+                                    </div>
+                                    <div class="rightEle tel">
+                                        <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}"><span class="small_msg">修正可</span>
+                                    </div>    
+                                    <div class="rightEle">
+                                        <p>撮影日:</p><input type="text"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
+                                    </div>    
+                                    <input  type="submit" class="linkBtn"  value="更新" name="update">      
+                                    <div class="qrCss">{!! QrCode::size(160)->generate(Request::url()); !!}</div>      
+                            </div>
+                    </form>  
+                </div>
+        </div>    
         <div class="procedure">
             <img src="{{ asset('image/pro.png') }}" alt="">
         </div>    

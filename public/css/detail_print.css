@@ -21,8 +21,8 @@
     }
 
     .procedure img{
-        height:620px;
-        width:72%;
+        height:521px;
+        width:60%;
         /* margin-top: -50px; */
     }
 
@@ -39,20 +39,20 @@
     }
 
     .rightEle{
-        font-size: 22px;
-        margin-top: -5px;
+        font-size: 15px;
+        margin-top: -8px;
         font-weight: 600;
     }
 
     .rightEle > input{
-        font-size: 23px;
+        font-size: 16px;
         font-weight: 600;
-        margin-top: -11px;
+        margin-top: -15px;
     }
 
 
     .rightEle > span{
-        font-size: 23px;
+        font-size: 16px;
     }
 
     .year{
@@ -80,5 +80,9 @@
 
     .tel{
         display: none;
+    }
+
+    .qrCss{
+        display: inline;
     }
 }     
