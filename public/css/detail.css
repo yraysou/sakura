@@ -103,7 +103,7 @@ form{
     background-color: white!important;
     border-radius: 3px!important;
     width: 60%;
-    font-size: 2.4rem;
+    font-size: 2.2vw;
     text-align: center;
 }
 
@@ -123,6 +123,10 @@ form{
     text-align: center;
     color: white!important;
     background-color: #ff9900;
+}
+
+.qrCss{
+    display: none;
 }
 
 @media print {
