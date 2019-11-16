@@ -7,19 +7,20 @@
 
 @section('js')
     <script type="text/javascript" src="{{asset('/js/getImage.js?cacherefResh19111')}}"></script>
+    <script type="text/javascript" src="{{asset('/js/changeImage.js?cacherefResh19111')}}"></script>
     <script type="text/javascript" src="{{asset('/js/jquery-1.11.3.min.js')}}"></script>
 @endsection
 
 @section('main')
     <div id="mainBlk" class="sideSpace ">
         <div class="photoArea">
-            <div class="photoEle">
+            <div class="photoEle originalImg" id="firstBox">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt=""><span>本データ</span>
             </div>
-            <div class="photoEle printImg">
+            <div class="photoEle printImg" id="secondBox">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt=""><span>写真印刷用データ</span>
             </div>
-            <div class="photoEle esImg">
+            <div class="photoEle esImg" id="thirdBox">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt=""><span>ESデータ</span>
             </div>
         </div>
@@ -49,10 +50,10 @@
             </div>
         </div>
         <div class="getWrapper">
-            <select class="getList" id="" onchange="">
-                <option selected="selected"  hidden value="">写真を選択して下さい</option>
-                <option class="original" value="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt="">本データ</option>
-                <option class="print" value="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt="">写真印刷用</option>
+            <select class="getList" id="changeSelect" onchange="entryChange()">
+                <option selected="selected"  hidden >写真を選択して下さい</option>
+                <option class="original"  value="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt="">本データ</option>
+                <option class="print"  value="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt="">写真印刷用</option>
                 <option class="es" value="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt="">ES用</option>
             </select>
             <a 
