@@ -66,7 +66,7 @@
                                     <div class="qrCss">{!! QrCode::size(160)->generate(Request::url()); !!}</div>      
                             </div>
                     </form>  
-                </div>
+            </div>
         </div>    
         <div class="procedure">
             <img src="{{ asset('image/pro.png') }}" alt="">
