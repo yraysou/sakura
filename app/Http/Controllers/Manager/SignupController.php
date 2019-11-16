@@ -59,14 +59,20 @@ class SignupController extends Controller
             // ディレクトリ作成
             if($request->original){
                 $user->original = $request->file('original')->store('public/'.$store_name."/".$userId);
+                $originalPath = Storage::disk('s3')->putFile('/'.$store_name."/".$userId, $request->file('original'));
+                $user->originalPath = $originalPath;
             }
             //印刷用写真
             if($request->print){
                 $user->print = $request->file('print')->store('public/'.$store_name."/".$userId);
+                $printPath = Storage::disk('s3')->putFile('/'.$store_name."/".$userId, $request->file('print'));
+                $user->printPath = $printPath;
             }
             // se用写真
-            if($request->se){
-                $user->se = $request->file('se')->store('public/'.$store_name."/".$userId);
+            if($request->es){
+                $user->es = $request->file('es')->store('public/'.$store_name."/".$userId);
+                $esPath = Storage::disk('s3')->putFile('/'.$store_name."/".$userId, $request->file('es'));
+                $user->esPath = $esPath;
             }
 
             $a_year_later = Carbon::parse($request->shooting_date)->addYear();
