@@ -22,4 +22,3 @@ function clickfunc() {
     }
 }
 
-//画像未選択時ガウンロードできない
