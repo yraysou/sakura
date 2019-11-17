@@ -17,13 +17,13 @@ function entryChange(){
             }else if(id == 2) {
         // 印刷用
                 document.getElementById('firstBox').style.display = "none";
-                document.getElementById('secondBox').style.display = "";
+                document.getElementById('secondBox').style.display = "inline";
                 document.getElementById('thirdBox').style.display = "none";
             }else if(id == 3){
         // se用
                 document.getElementById('firstBox').style.display = "none";
                 document.getElementById('secondBox').style.display = "none";
-                document.getElementById('thirdBox').style.display = "";
+                document.getElementById('thirdBox').style.display = "inline";
             }
         }    
     }
