@@ -2,7 +2,7 @@
     #wrap {
         padding-top: 0;
         background-color: antiquewhite;
-        height: 90vh;
+        height: 90%;
     }
 
     .sendButton, input[type="submit"].sendButton {

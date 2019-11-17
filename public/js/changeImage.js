@@ -1,6 +1,6 @@
 function entryChange(){
     // レスポンシブのみ適応
-    if(navigator.userAgent.match(/(iPhone|iPad|iPod|Android)/)){    
+    if(navigator.userAgent.match(/(iPhone|iPod|Android)/)){    
         if(document.getElementById('changeSelect')){
             id = document.getElementById('changeSelect').selectedIndex;
 
