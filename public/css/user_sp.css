@@ -4,40 +4,42 @@
         background-color: antiquewhite;
         height: 90vh;
     }
+    
     .sendButton, input[type="submit"].sendButton {
         width: 170px;
         font-size: 1.5rem;
     }
+
     .form-body {
         height: 380px;
     }
+
     .photoArea {
         margin: 0 auto;
-        margin-left: 23%;
-        margin-right: 28%;
-        text-align: center;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
     }
-    .photoEle {
-        /* 横スクロール */
-        display: inline-block;
-        width: 100%;
 
-         /* 見た目調整 */
-        margin-right: 15%;
-        text-align: center;
+    .photoEle {
+        width: 200px;
+        height: 300px;
     }
-    /* .printImg, .esImg {
+
+    .photoEle img{
+        width: 200px;
+        height: 250px;
+        object-fit: contain;    
+    }
+
+    .printImg, .esImg {
         display: none;
-    } */
+    }
     .bottomEle {
         display: block;
         margin: 0 auto;
+        margin-top: 3%;
     }
     .left {
         width: 100%;
+        margin-top: 20px;
     }
     .left > h2 {
         font-size: 2.3rem;
@@ -74,6 +76,7 @@
     .getWrapper {
         display:inline-block;
         width: 90%;
+        margin-left: 22px;
     } 
     .getList {
         margin: 25px auto;

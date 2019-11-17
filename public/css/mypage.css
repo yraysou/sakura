@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-
 .photoArea {
     display: flex;
 }
@@ -26,6 +25,7 @@
     position: relative;
     width: 40%;
     margin: 10px auto;
+    margin-left: 32%;
     display: flex!important;
 }
 .getList {
@@ -72,13 +72,15 @@
     width: 30%;
     margin: 0 auto;
     text-align: center;
+    width: 220px;
+    height: 220px;
 }
 
 .photoEle > img {
     margin: 0 auto;
     display: block;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .photoEle > span {
@@ -91,6 +93,7 @@
     width: 75%;
     display: flex;
     margin: 30px auto;
+    margin-top: 10%;
 
 }
 
@@ -99,12 +102,12 @@
 }
 
 .left > h2 {
-    font-size: 2.5vw;
+    font-size: 3.5rem;
     font-weight: 700;
 }
 
 .left > p {
-    font-size: 1.8vw;
+    font-size: 2rem;
 }
 
 form{
