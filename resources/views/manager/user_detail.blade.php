@@ -13,13 +13,13 @@
         <div class="allContents">
         <div class="photoArea">
             <div class="photoEle original">
-                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->original))}}" alt=""><span>本データ</span>
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->original))}}"><span>本データ</span>
             </div>
             <div class="photoEle print">
-                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->print))}}" alt=""><span>印刷用データ</span>
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->print))}}"><span>印刷用データ</span>
             </div>
             <div class="photoEle se">
-                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}" alt=""><span>ES用データ</span>
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}"><span>ES用データ</span>
             </div>
         </div>
             <div class="bottomEle">

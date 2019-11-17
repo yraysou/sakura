@@ -72,6 +72,8 @@
     width: 30%;
     margin: 0 auto;
     text-align: center;
+    width: 220px; height: 220px;
+    object-fit: contain;
 }
 
 .photoEle > img {
@@ -91,6 +93,7 @@
     width: 75%;
     display: flex;
     margin: 30px auto;
+    margin-top: 10%;
 
 }
 
