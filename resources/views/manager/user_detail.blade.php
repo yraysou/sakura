@@ -18,8 +18,8 @@
             <div class="photoEle print">
                 <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->print))}}"><span>印刷用データ</span>
             </div>
-            <div class="photoEle se">
-                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->se))}}"><span>ES用データ</span>
+            <div class="photoEle es">
+                <img class="hostdata__img" src="{{asset(str_replace('public/', '/storage/', $users->es))}}" alt=""><span>ES用データ</span>
             </div>
         </div>
             <div class="bottomEle">

@@ -4,38 +4,28 @@
         background-color: antiquewhite;
         height: 90vh;
     }
+    
     .sendButton, input[type="submit"].sendButton {
         width: 170px;
         font-size: 1.5rem;
     }
+
     .form-body {
         height: 380px;
     }
+
     .photoArea {
         margin: 0 auto;
-        margin-left: 29%;
-        margin-right: 28%;
-        text-align: center;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-        width: 50%;
     }
+
     .photoEle {
         width: 200px; height: 300px;
         object-fit: contain;    
-
-        /* 横スクロール */
-        display: inline-block;
-        width: 100%;
-
-         /* 見た目調整 */
-        margin-right: 35%;
-        text-align: center;
     }
-    /* .printImg, .esImg {
+
+    .printImg, .esImg {
         display: none;
-    } */
+    }
     .bottomEle {
         display: block;
         margin: 0 auto;
