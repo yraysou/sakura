@@ -49,7 +49,7 @@
 }
 
 .left > p {
-    font-size: 1.3vw;
+    font-size: 2rem;
 }
 
 form{
@@ -133,4 +133,10 @@ form{
     .linkBtn{
         display: none;
     }
-}     
+}
+
+@media (max-width:750px) {
+    .left > p {
+        font-size: 2.6vw;
+    }
+}
