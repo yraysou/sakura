@@ -63,7 +63,7 @@
                                         <p>撮影日:</p><input type="text"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
                                     </div>    
                                     <input  type="submit" class="linkBtn"  value="更新" name="update">      
-                                    <div class="qrCss">{!! QrCode::size(160)->generate(Request::url()); !!}</div>      
+                                    <div class="qrCss">{!! QrCode::size(160)->generate(route('user.loginpage')); !!}</div>      
                             </div>
                     </form>  
             </div>
