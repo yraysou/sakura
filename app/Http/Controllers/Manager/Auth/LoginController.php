@@ -46,12 +46,14 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         if(Auth::guard('manager')->check()) {
-            return redirect()->route('manager_list');
+            if(Auth::guard('manager')->user()->manager_id == 1){
+                return redirect()->route('manager_list');
+            }else{
+                return redirect()->route('user_list');
+            }
         }else {
             $store = Manager::get();
-            return view('manager.login',[
-                'store' => $store,
-            ]);
+            return view('manager.login');
         }
     }
 
