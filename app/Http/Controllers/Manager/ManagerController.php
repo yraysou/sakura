@@ -47,7 +47,6 @@ class ManagerController extends Controller
     }
 
     public function delete($user_id,$keyword = null) {
-        $manager_id = Auth::guard('manager')->user()->manager_id;
         $user = DB::table('users')
                         ->leftjoin(
                             'manager',
