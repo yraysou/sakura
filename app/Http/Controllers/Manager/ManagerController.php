@@ -58,33 +58,9 @@ class ManagerController extends Controller
                         // exit;
         Storage::deleteDirectory("/public"."/".$user->store_name."/".$user->user_id);
         User::destroy($user_id);
-
-        if(!empty($keyword))
-        {   
-            //  ユーザーから検索
-            $users = DB::table('users')
-                    ->where('user_id','like','%'.$keyword.'%')
-                    ->orwhere('name','like', '%'.$keyword.'%')
-                    ->orwhere('tel_number','like', '%'.$keyword.'%')
-                    ->where("manager_id",$manager_id)
-                    ->latest()
-                    ->get();
-
-        }else{//キーワードが未入力の場合
-            $users = DB::table('users')
-                    ->where("manager_id",$manager_id)
-                    ->latest()
-                    ->get();
-        }
         //検索フォームへ
-        return view('manager/user_list',[
-            'users' => $users,
-            'keyword' => $keyword,
-            ]);
-        // $users = User::orderBy('created_at', 'desc')->get();
-        // return view('manager.user_list', [
-        //     'users' => $users,
-        
+        return redirect()->route('user_list',['keyword' => $keyword]);
+
     }
 
     public function managerList() {
