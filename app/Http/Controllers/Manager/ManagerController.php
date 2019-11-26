@@ -72,9 +72,7 @@ class ManagerController extends Controller
     public function deleteManager($manager_id) {
         Manager::destroy($manager_id);
         $managers =  Manager::get();
-        return view('manager.manager_list',[
-            'managers' => $managers
-        ]);
+        return redirect()->route('manager_list');
     }
 
     public function userListSearch(Request $request)
