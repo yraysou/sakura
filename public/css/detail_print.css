@@ -22,7 +22,7 @@
     }
 
     .procedure img{
-        height:505px;
+        height:500px;
         width:55%;
         margin-top: 1px;
     }
@@ -86,4 +86,8 @@
     .qrCss{
         display: inline;
     }
+
+    /* .popUp{
+        display: none;
+    } */
 }     
