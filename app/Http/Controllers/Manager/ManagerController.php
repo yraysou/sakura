@@ -54,10 +54,9 @@ class ManagerController extends Controller
                             'users.manager_id','=','manager.manager_id')
                         ->where([['users.id',$user_id]])
                         ->first();
-                        // dump($user);
-                        // exit;
         Storage::deleteDirectory("/public"."/".$user->store_name."/".$user->user_id);
         User::destroy($user_id);
+    
 
         if(!empty($keyword))
         {   
@@ -81,10 +80,6 @@ class ManagerController extends Controller
             'users' => $users,
             'keyword' => $keyword,
             ]);
-        // $users = User::orderBy('created_at', 'desc')->get();
-        // return view('manager.user_list', [
-        //     'users' => $users,
-        
     }
 
     public function managerList() {

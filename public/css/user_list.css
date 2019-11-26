@@ -1,3 +1,8 @@
+#mainBlk{
+    position: relative;
+    z-index: 1;
+}
+
 .main-body {
     width: 80%;
     height: 480px;
@@ -66,6 +71,7 @@
 .lineHeight {
     display: inline-block;
     line-height: 35px;
+    cursor: pointer;
 }
 
 .noColumn {
@@ -124,4 +130,57 @@
     margin: 0 auto;
     margin-right: 15px;
     font-size: 12px;
+}
+
+.popUp-warapper a{
+    cursor: pointer;
+}
+
+.popUp{
+    z-index: 110;
+    top: 40vh;
+    left: 43vw;
+    position: fixed;
+    border: solid 2px #000000;
+    background-color:rgb(248, 241, 232);
+    border-radius: 4px;
+}
+
+.yes{
+    margin-right:15px; 
+}
+
+.yes:hover{
+    color: #ff5100;
+}
+
+.not:hover{
+    color: #ff5100;
+}
+
+.max{
+    font-size: 20px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.popUp-wrappar{
+    font-size: 18px;
+    font-weight: bolder;
+    display: flex;
+    margin-left: 55px;
+    margin-bottom: 10px;
+}
+
+.backImg{
+    z-index: 105;
+    position: fixed;
+    background-color: #7678eb;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
 }
