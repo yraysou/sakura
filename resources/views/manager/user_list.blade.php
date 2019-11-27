@@ -85,8 +85,8 @@
                         <p>本当に削除しますか？</p>
                     </div>
                     <div class="popUp-wrapper">
-                        <a href="{{ '/manager/delete'.'/'.$user->id.'/'.$keyword }}" class="yes"><p>はい</p></a>
-                        <a href="" class="delete no" onclick="adducePopupClose()"><p>いいえ</P></a>
+                        <a href="{{ '/manager/delete'.'/'.$user->id.'/'.$keyword }}" class="popUp--btn"><p>はい</p></a>
+                        <a href="" class="delete popUp--btn" onclick="adducePopupClose()"><p>いいえ</P></a>
                     </div>
                 </div>
         </div>
