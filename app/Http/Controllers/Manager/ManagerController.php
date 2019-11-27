@@ -47,7 +47,6 @@ class ManagerController extends Controller
     }
 
     public function delete($user_id,$keyword = null) {
-        $manager_id = Auth::guard('manager')->user()->manager_id;
         $user = DB::table('users')
                         ->leftjoin(
                             'manager',
@@ -56,30 +55,8 @@ class ManagerController extends Controller
                         ->first();
         Storage::deleteDirectory("/public"."/".$user->store_name."/".$user->user_id);
         User::destroy($user_id);
-    
-
-        if(!empty($keyword))
-        {   
-            //  ユーザーから検索
-            $users = DB::table('users')
-                    ->where('user_id','like','%'.$keyword.'%')
-                    ->orwhere('name','like', '%'.$keyword.'%')
-                    ->orwhere('tel_number','like', '%'.$keyword.'%')
-                    ->where("manager_id",$manager_id)
-                    ->latest()
-                    ->get();
-
-        }else{//キーワードが未入力の場合
-            $users = DB::table('users')
-                    ->where("manager_id",$manager_id)
-                    ->latest()
-                    ->get();
-        }
         //検索フォームへ
-        return view('manager/user_list',[
-            'users' => $users,
-            'keyword' => $keyword,
-            ]);
+        return redirect()->route('user_list',['keyword' => $keyword]);
     }
 
     public function managerList() {
@@ -91,10 +68,7 @@ class ManagerController extends Controller
 
     public function deleteManager($manager_id) {
         Manager::destroy($manager_id);
-        $managers =  Manager::get();
-        return view('manager.manager_list',[
-            'managers' => $managers
-        ]);
+        return redirect()->route('manager_list');
     }
 
     public function userListSearch(Request $request)
