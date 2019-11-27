@@ -81,13 +81,16 @@
             <a class="linkBtn" href="/manager/user_list">一覧へ戻る</a>
         </div>
         <div class="popUp" id="popupBg" hidden>
-            <div class="max">
-                <p>本当に更新しますか？</p>
+            <div class="my-parts" onclick="popupClose()"><span></span></div>
+            <div class="popUp-list">
+                <div class="max">
+                    <p>本当に更新しますか？</p>
+                </div>
+                <div class="popUp-wrapper">
+                    <a  href="javascript:form1.submit()" type="submit" class="yes"><p>はい</p></a>
+                    <a href="" class="update no" onclick="popupClose()"><p>いいえ</p></a>
+                </div>
             </div>
-            <dic class="popUp-wrappar">
-                <a  href="javascript:form1.submit()" type="submit" class="yes">はい</a>
-                <a href="" class="update no" onclick="popupClose()">いいえ</a>
-            </dic>
         </div>
         <div class="backImg update"onclick="popupClose()" hidden></div>
     </div>

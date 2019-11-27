@@ -78,15 +78,18 @@
             @endif
             <a href="{{ route('manager.logout') }}" class="linkBtn">ログアウト</a>
         </div>
-        <div class="popUp"  id="adducePopupBg" hidden>
-            <div class="max">
-                <p>本当に削除しますか？</p>
-            </div>
-            <div class="popUp-wrappar">
-                    <a href="{{ '/manager/delete'.'/'.$user->id.'/'.$keyword }}" class="yes"><p>はい</p></a>
-                <a href="" class="delete not" onclick="adducePopupClose()"><p>いいえ</P></a>
-            </div>
+        <div class="popUp" id="adducePopupBg" hidden>
+                <div class="my-parts" onclick="adducePopupClose()"><span></span></div>
+                <div class="popUp-list">
+                    <div class="max">
+                        <p>本当に削除しますか？</p>
+                    </div>
+                    <div class="popUp-wrapper">
+                        <a href="{{ '/manager/delete'.'/'.$user->id.'/'.$keyword }}" class="yes"><p>はい</p></a>
+                        <a href="" class="delete no" onclick="adducePopupClose()"><p>いいえ</P></a>
+                    </div>
+                </div>
         </div>
-        <div class="backImg delete "onclick="adducePopupClose()" hidden></div>
+        <div class="backImg delete" onclick="adducePopupClose()" hidden></div>    
     </div>
 @endsection

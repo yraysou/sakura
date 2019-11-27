@@ -136,20 +136,29 @@ form{
 
 .popUp{
     z-index: 110;
-    top: 40vh;
-    left: 43vw;
+    top: 30vh;
+    left: 34vw;
     position: fixed;
-    border: solid 2px #000000;
-    background-color:rgb(248, 241, 232);
-    border-radius: 4px;
+    background-color:white;
+    border-radius: 20px;
 }
 
-.popUp-wrappar{
-    font-size: 18px;
+.popUp-wrapper{
+    font-size: 28px;
     font-weight: bolder;
+    text-align: center;
+    margin-bottom: 105px; 
     display: flex;
-    margin-left: 55px;
-    margin-bottom: 10px;
+}
+
+.popUp-wrapper p{
+    color: #ff9900;;
+}
+
+.popUp-list{
+    margin-left: 85px;
+    margin-right: 85px;
+    color: #ff9900;
 }
 
 .backImg{
@@ -165,26 +174,72 @@ form{
 
 .yes{
     margin-right:15px; 
+    border: solid 2px #ff9900;
+    border-radius: 10px;
+    padding: 3px 30px;
+    color: #ff9900;
 }
 
 .yes:hover{
-    color: #ff5100;
+    background-color: #ff9900;
+}
+
+.yes p:hover{
+    color: white;
+}
+
+.no{
+    border: solid 2px #ff9900;
+    border-radius: 10px;
+    padding: 3px 30px;
+    color: #ff9900;
 }
 
 .no:hover{
-    color: #ff5100!important;
+    background-color: #ff9900;
+}
+
+.no p:hover{
+    color: white;
 }
 
 .max{
-    font-size: 20px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 50px;
+    margin-top: 70px;
 }
 
 .more{
     cursor: pointer;
+}
+
+.my-parts {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    text-align: right;
+}
+
+.my-parts span::before,
+.my-parts span::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 70%;
+    left: 730%;
+    width: 84%;
+    height: 16%;
+    margin: -8% 0 0 -42%;
+    background: #ff9900;
+}
+.my-parts span::before {
+    transform: rotate(-45deg);
+}
+.my-parts span::after {
+    transform: rotate(45deg);
 }
 
 @media print {
