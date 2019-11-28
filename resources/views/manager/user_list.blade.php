@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script type="text/javascript" src="{{asset('/js/modal.js?cacherefResh19111')}}"></script>
+<script type="text/javascript" src="{{asset('/js/modal.js?cacherefResh19111')}}"></script>
 @endsection
 
 @section('main')
@@ -58,7 +58,7 @@
                                     <td>{{$user->tel_number}}</td>
                                     <td>{{$user->shooting_date}}</td>
                                     <td><a class ="lineHeight fontWhite" href="{{ '/manager/user_detail'.'/'.$user->id }}">詳細</a></td>
-                                    <td><a class ="lineHeight fontRed" onclick="adducePopupOpen()" hidden>削除</a></td>
+                                    <td><a class ="lineHeight fontRed"  onclick="adducePopupOpen(event) ">削除</a><input type="hidden" value="{{$user->user_id}}"></td>
                                 {{-- <td><a class ="lineHeight fontRed" href="{{ '/manager/delete'.'/'.$user->id.'/'.$keyword }}">削除</a></td> --}}
                             </tr> 
                             @endforeach
@@ -85,7 +85,8 @@
                         <p>本当に削除しますか？</p>
                     </div>
                     <div class="popUp-wrapper">
-                        <a href="{{ '/manager/delete'.'/'.$user->id.'/'.$keyword }}" class="yes"><p>はい</p></a>
+                        {{-- <a href="{{ '/manager/delete'.'/'.$user->id.'/'.$keyword }}" class="yes"><p>はい</p></a> --}}
+                        <a href="" id="hidden2"  class="yes" ><p>はい</p></a>
                         <a href="" class="delete no" onclick="adducePopupClose()"><p>いいえ</P></a>
                     </div>
                 </div>
