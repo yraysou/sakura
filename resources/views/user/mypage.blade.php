@@ -43,9 +43,6 @@
                 <div class="rightEle">
                     <p>撮影日:</p><span>{{ $users->shooting_date }}</span>
                 </div> 
-                <div class="rightEle">
-                    <p> 電話番号:</p><span>{{ $users->tel_number }}</span>
-                </div>
             </div>     
         </div>
         <div class="getWrapper">
