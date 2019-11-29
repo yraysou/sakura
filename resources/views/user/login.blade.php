@@ -30,7 +30,7 @@
                 <div class="form-group">
                     <label for="password" class="input-title">Password</label>
                     <div class="input-group">
-                        <input id="password" placeholder="Password" type="password" class="form-control" name="password" required>
+                        <input id="password" placeholder="Password　※小文字と大文字を区別しております" type="text" class="form-control" name="password" required>
 
                         @if ($errors->has('password'))
                             <span class="help-block">
