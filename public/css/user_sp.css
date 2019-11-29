@@ -9,12 +9,32 @@
         background-color: antiquewhite;
         height: 100vh;
     }
+
+    .check{
+        width: 90%!important;
+        color: red;
+        margin-left: 5%!important;
+        font-size: 1.8rem;    
+    }
+
+    .check-wrapper{
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 1.39rem!important;
+        font-weight: bold;
+    }
+
+    .sendButton{
+        margin-top: 50px!important;
+    }
+
     .sendButton, input[type="submit"].sendButton {
-        width: 170px;
+        width: 60%;
         font-size: 1.5rem;
     }
     .form-body {
-        height: 380px;
+        height: 75vh;
+
     }
     .photoArea {
         margin: 0 auto;
@@ -88,8 +108,7 @@
         margin: 7px 0;
         width: 45%;
     }  
-} 
-
-@media screen and (max-width:480px){
     
 }
+
+
