@@ -3,19 +3,32 @@
         padding-top: 0px;
     }
 
+    .sideSpace{
+        margin-top: -40px;
+    }
+
+    .allContents{
+        border:solid 6px antiquewhite;
+        border-radius: 5px;
+        height: 438px;
+    }
+
     .linkBtn{
         display: none;
     }
 
     .procedure{
         display: inline;
-
     }
 
     .procedure img{
-        height:650px;
-        width: 75%;
-        margin-top: -50px;
+        height:505px;
+        width:55%;
+        margin-top: 1px;
+    }
+
+    .bottomEle{
+        margin-top: -17px
     }
 
     left h3{
@@ -27,19 +40,20 @@
     }
 
     .rightEle{
-        font-size: 20px;
-        margin-top: -5px;
+        font-size: 15px;
+        margin-top: -8px;
         font-weight: 600;
     }
 
     .rightEle > input{
-        font-size: 15px;
+        font-size: 16px;
         font-weight: 600;
+        margin-top: -15px;
     }
 
 
     .rightEle > span{
-        font-size: 15px;
+        font-size: 16px;
     }
 
     .year{
@@ -52,16 +66,24 @@
     }
     
     .left > h3 {
-        font-size: 0.1px;
-        font-weight: 600;
-        text-indent:100%;
-        overflow:hidden;
-        white-space:nowrap;
+        display: none;
     }
     
     .left > p {
         font-size: 1.6rem;
     }
-    
-    
+
+    .small_msg{
+        text-indent:100%;
+        overflow:hidden;
+        white-space:nowrap;
+    } 
+
+    .tel{
+        display: none;
+    }
+
+    .qrCss{
+        display: inline;
+    }
 }     

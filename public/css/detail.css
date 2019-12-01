@@ -17,8 +17,8 @@
 .photoEle > img{
     margin: 0 auto;
     display: block;
-    height: 22vw;
-    object-fit: cover;
+    width: 220px; height: 220px;
+    object-fit: contain;
 }
 
 .photoEle > span {
@@ -39,17 +39,17 @@
 }
 
 .left > h2 {
-    font-size: 2.5vw;
+    font-size: 1.8vw;
     font-weight: 700;
 }
 
 .left > h3 {
-    font-size: 1.8vw;
+    font-size: 1.4vw;
     font-weight: 600;
 }
 
 .left > p {
-    font-size: 1.9vw;
+    font-size: 2rem;
 }
 
 form{
@@ -72,12 +72,12 @@ form{
 .rightEle {
     display: flex;
     height: 37px;
-    font-size: 2.8vw;
+    font-size: 2vw;
     margin-top: 7px;
 }
 
 .year{
-    font-size: 2.9rem;
+    font-size: 2.3vw;
 }
 
 .rightEle > p {
@@ -103,7 +103,7 @@ form{
     background-color: white!important;
     border-radius: 3px!important;
     width: 60%;
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     text-align: center;
 }
 
@@ -125,8 +125,18 @@ form{
     background-color: #ff9900;
 }
 
+.qrCss{
+    display: none;
+}
+
 @media print {
     .linkBtn{
         display: none;
     }
-}     
+}
+
+@media (max-width:750px) {
+    .left > p {
+        font-size: 2.6vw;
+    }
+}

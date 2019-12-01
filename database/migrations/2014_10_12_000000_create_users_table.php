@@ -23,7 +23,7 @@ class CreateUsersTable extends Migration
             $table->integer('manager_id');            
             $table->string('original')->nullable();
             $table->string('print')->nullable();
-            $table->string('se')->nullable();
+            $table->string('es')->nullable();
             $table->date('shooting_date');
             $table->date('a_year_later');
             $table->integer('agreement_status')->default(0);           
