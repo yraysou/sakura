@@ -1,17 +1,40 @@
-@media screen and (max-width:480px){
+@media screen and (max-width:479px){
+    #mainBlk{
+        height: 100vh!important;
+        padding: 2%;
+    }
+
     #wrap {
         padding-top: 0;
         background-color: antiquewhite;
-        height: 90vh;
+        height: 100vh;
+    }
+
+    .check{
+        width: 90%!important;
+        color: red;
+        margin-left: 5%!important;
+        font-size: 1.8rem;    
+    }
+
+    .check-wrapper{
+        width: 100%;
+        margin-bottom: 15px;
+        font-size: 1.39rem!important;
+        font-weight: bold;
+    }
+
+    .sendButton{
+        margin-top: 50px!important;
     }
 
     .sendButton, input[type="submit"].sendButton {
-        width: 170px;
+        width: 60%;
         font-size: 1.5rem;
     }
 
     .form-body {
-        height: 380px;
+        height: 100vh;;
     }
 
     .photoArea {
@@ -80,10 +103,13 @@
         margin-left: 22px;
     } 
     .getList {
-        margin: 25px auto;
+        margin: 7px auto;
     }
     .getImage {
-        margin: 25px 0;
+        margin: 7px 0;
         width: 45%;
     }  
-} 
+    
+}
+
+
