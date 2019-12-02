@@ -87,8 +87,8 @@
                     <p>本当に更新しますか？</p>
                 </div>
                 <div class="popUp-wrapper">
-                    <a  href="javascript:form1.submit()" type="submit" class="yes"><p>はい</p></a>
-                    <a href="" class="update no" onclick="popupClose()"><p>いいえ</p></a>
+                    <a  href="javascript:form1.submit()" type="submit" class="popUp--btn"><p>はい</p></a>
+                    <a href="" class="update popUp--btn" onclick="popupClose()"><p>いいえ</p></a>
                 </div>
             </div>
         </div>

@@ -1,12 +1,6 @@
-    const adducePopupOpen = (ev) => {
+    const adducePopupOpen = () => {
         $('.delete, #adducePopupBg').show()
-        const getId = ev.target.nextElementSibling.value
-
-        const deleteModal = '{{/manager'+'/delete'+ getId +'}}';
-
-        // $("div.popUp-wrapper").each(functiuon(){
-
-        // });
+                
     }    
 const adducePopupClose = () => $('.delete, #adducePopupBg').hide();
 

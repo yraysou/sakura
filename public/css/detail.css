@@ -136,8 +136,12 @@ form{
 
 .popUp{
     z-index: 110;
-    top: 30vh;
-    left: 34vw;
+    width: 50rem;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    transform: translateY(-50%);
     position: fixed;
     background-color:white;
     border-radius: 20px;
@@ -172,36 +176,23 @@ form{
     width: 100vw;
 }
 
-.yes{
-    margin-right:15px; 
+.popUp--btn{
+    width: 9rem;
+    margin: 0 auto;
     border: solid 2px #ff9900;
     border-radius: 10px;
     padding: 3px 30px;
     color: #ff9900;
 }
 
-.yes:hover{
+.popUp--btn:hover{
     background-color: #ff9900;
 }
 
-.yes p:hover{
+.popUp--btn p:hover{
     color: white;
 }
 
-.no{
-    border: solid 2px #ff9900;
-    border-radius: 10px;
-    padding: 3px 30px;
-    color: #ff9900;
-}
-
-.no:hover{
-    background-color: #ff9900;
-}
-
-.no p:hover{
-    color: white;
-}
 
 .max{
     font-size: 30px;
@@ -228,8 +219,8 @@ form{
     display: block;
     content: "";
     position: absolute;
-    top: 70%;
-    left: 730%;
+    top: 100%;
+    left: 780%;
     width: 84%;
     height: 16%;
     margin: -8% 0 0 -42%;

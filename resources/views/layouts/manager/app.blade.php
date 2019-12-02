@@ -40,5 +40,6 @@
             @yield('main')
             {{-- @include('common.footer') --}}
         </div>
+        @yield('bodyScripts')
     </body>
 </html>
