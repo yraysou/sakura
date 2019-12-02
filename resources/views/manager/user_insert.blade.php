@@ -22,7 +22,7 @@
                 </div>
             </div>
         @endif
-        <form action="{{ ('/sign_up') }}" enctype="multipart/form-data" method="post">
+        <form action="{{ ('/sign_up') }}" enctype="multipart/form-data" method="post" autocomplete="off">
             {{ csrf_field() }}
             <div class="input-area">
                 <div class="input-column">
