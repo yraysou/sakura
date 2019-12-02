@@ -86,8 +86,8 @@
                     </div>
                     <div class="popUp-wrapper">
                         {{-- <a href="{{ '/manager/delete'.'/'.$user->id.'/'.$keyword }}" class="yes"><p>はい</p></a> --}}
-                        <a href="" id="deleteRun"  class="yes" ><p>はい</p></a>
-                        <a href="" class="delete no" onclick="adducePopupClose()"><p>いいえ</P></a>
+                        <a href="" id="deleteRun"  class="popUp--btn" ><p>はい</p></a>
+                        <a href="" class="popUp--btn" onclick="adducePopupClose()"><p>いいえ</P></a>
                     </div>
                 </div>
         </div>
