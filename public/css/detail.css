@@ -106,6 +106,9 @@ form{
     font-size: 2.2rem;
     text-align: center;
 }
+.shooting_date{
+    font-size: 2rem!important;
+}
 
 .fontRed{
     color:red;
