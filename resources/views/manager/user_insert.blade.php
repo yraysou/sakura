@@ -78,7 +78,7 @@
                             Drop or Clickして下さい。<br>
                             --------------------------/             
                         </div>
-                        <input type="file" class="fileInput" id="fileInput1" name="es" style="display:none"><span>ESデータ</span>
+                        <input type="file" class="fileInput" id="fileInput1" name="se" style="display:none"><span>ESデータ</span>
                 </div>
             </div>
             <input type="submit" class="sendButton insertBtn" value="保存">
