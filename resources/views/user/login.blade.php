@@ -30,7 +30,7 @@
                 <div class="form-group">
                     <label for="password" class="input-title">Password</label>
                     <div class="input-group">
-                        <input id="password" placeholder="Password" type="password" class="form-control" name="password" required>
+                        <input id="password" placeholder="Password" type="text" class="form-control" name="password" required>
 
                         @if ($errors->has('password'))
                             <span class="help-block">
@@ -38,6 +38,14 @@
                             </span>
                         @endif
                     </div>
+                    <p>※小文字と大文字を区別しております</p>
+                </div>
+                <div class="check">
+                    <div class="check-wrapper">
+                        <h1>パソコンからのダウンロードはコチラ</h1>
+                        <a href="http://gryymens.jpn.org/use">【　http://gryymens.jpn.org/user　】</a>
+                    </div>
+                    <p>注意事項：：Google Chromeからダウンロードをおすすめいたします。他のサイトからですと不具合が生じる場合がございます。</p>
                 </div>
                 {{-- ログインボタン --}}
                 <input class="sendButton" type="submit" value="ログイン" style="margin-top: 25px" />

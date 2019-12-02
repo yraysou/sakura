@@ -25,20 +25,6 @@
             </div>
         </div>
         <div class="bottomEle">
-                <div class="right">
-                        <div class="rightEle">
-                            <p>ID:</p><span>{{ $users->user_id }}</span>
-                        </div>
-                        <div class="rightEle">
-                            <p>氏名:</p><span>{{ $users->name }}</span>
-                        </div>
-                        <div class="rightEle">
-                            <p>撮影日:</p><span>{{ $users->shooting_date }}</span>
-                        </div> 
-                        <div class="rightEle">
-                            <p> 電話番号:</p><span>{{ $users->tel_number }}</span>
-                        </div>
-                    </div>             
             <div class="left">
                 <h2>画像取得方法の説明</h2>
                 <p>/--------------------------------</p>
@@ -48,6 +34,17 @@
                 <p class="fontRed">使用可能期限:<span class="year">{{ $users->a_year_later }}</span><br/>
                 忘れずにデータを取得してください</p>
             </div>
+            <div class="right">
+                <div class="rightEle">
+                    <p>ID:</p><span>{{ $users->user_id }}</span>
+                </div>
+                <div class="rightEle">
+                    <p>氏名:</p><span>{{ $users->name }}</span>
+                </div>
+                <div class="rightEle">
+                    <p>撮影日:</p><span>{{ $users->shooting_date }}</span>
+                </div> 
+            </div>     
         </div>
         <div class="getWrapper">
             <select class="getList" id="changeSelect" onchange="entryChange()">
