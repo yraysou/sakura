@@ -3,9 +3,13 @@
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{asset('/css/detail.css?cacherefResh19111')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('/css/detail_print.css?cacherefResh19111')}}">
+@endsection
+
+@section('js')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+    <script type="text/javascript" src="{{asset('/js/modal.js?cacherefResh19111')}}"></script>
 @endsection
 
 @section('main')    
@@ -35,7 +39,7 @@
                     <p class="fontRed">使用可能期限:<span class="year">{{ $users->a_year_later }}</span><br/>
                     忘れずにデータを取得してください</p>
                 </div>
-                    <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post">
+                    <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post" name="form1">
                             {{ csrf_field() }}
                                 <div class="right">
                                         <script>
@@ -45,7 +49,7 @@
                                                 });
                                             @endif
                                         </script>
-                                        
+            
                                     <div class="rightEle">
                                         <p>ID:</p> <span class="rightEle__detail">{{ $users->user_id }}</span>
                                         <input type="hidden" value="{{ $users->user_id }}" name="user_id">
@@ -62,7 +66,8 @@
                                     <div class="rightEle">
                                         <p>撮影日:</p><input type="text"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
                                     </div>    
-                                    <input  type="submit" class="linkBtn"  value="更新" name="update">      
+                                    <input  type="hidden" class="linkBtn"  value="更新" name="update" >
+                                    <a  class="linkBtn more" name="update" onclick="popupOpen()">更新</a>
                                     <div class="qrCss">{!! QrCode::size(160)->generate(route('user.loginpage')); !!}</div>      
                             </div>
                     </form>  
@@ -75,5 +80,18 @@
             <a class="linkBtn" href="#" onclick="window.print();return false;">このページを印刷</a>
             <a class="linkBtn" href="/manager/user_list">一覧へ戻る</a>
         </div>
+        <div class="popUp" id="popupBg" hidden>
+            <div class="my-parts" onclick="popupClose()"><span></span></div>
+            <div class="popUp-list">
+                <div class="max">
+                    <p>本当に更新しますか？</p>
+                </div>
+                <div class="popUp-wrapper">
+                    <a  href="javascript:form1.submit()" type="submit" class="popUp--btn"><p>はい</p></a>
+                    <a href="" class="update popUp--btn" onclick="popupClose()"><p>いいえ</p></a>
+                </div>
+            </div>
+        </div>
+        <div class="backImg update"onclick="popupClose()" hidden></div>
     </div>
 @endsection

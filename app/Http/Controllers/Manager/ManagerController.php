@@ -51,15 +51,13 @@ class ManagerController extends Controller
                         ->leftjoin(
                             'manager',
                             'users.manager_id','=','manager.manager_id')
-                        ->where([['users.id',$user_id]])
+                        ->where([['users.user_id',$user_id]])
                         ->first();
-                        // dump($user);
-                        // exit;
         Storage::deleteDirectory("/public"."/".$user->store_name."/".$user->user_id);
-        User::destroy($user_id);
+        // User::destroy($user_id);
+        $deleteUser = User::where('user_id',$user_id)->delete();
         //検索フォームへ
         return redirect()->route('user_list',['keyword' => $keyword]);
-
     }
 
     public function managerList() {
