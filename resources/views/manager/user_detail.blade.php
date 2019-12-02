@@ -64,7 +64,7 @@
                                         <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}"><span class="small_msg">修正可</span>
                                     </div>    
                                     <div class="rightEle">
-                                        <p>撮影日:</p><input type="text"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
+                                        <p>撮影日:</p><input type="date"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
                                     </div>    
                                     <input  type="hidden" class="linkBtn"  value="更新" name="update" >
                                     <a  class="linkBtn more" name="update" onclick="popupOpen()">更新</a>
