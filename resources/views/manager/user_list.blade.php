@@ -93,3 +93,8 @@
         <div class="backImg delete" onclick="adducePopupClose()" hidden></div>    
     </div>
 @endsection
+@section('bodyScripts')
+    <script>
+        
+    </script>
+@endsection
