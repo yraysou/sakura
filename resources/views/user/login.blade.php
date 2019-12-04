@@ -40,13 +40,6 @@
                     </div>
                     <p>※小文字と大文字を区別しております</p>
                 </div>
-                <div class="check">
-                    <div class="check-wrapper">
-                        <h1>パソコンからのダウンロードはコチラ</h1>
-                        <a href="http://gryymens.jpn.org/use">【　http://gryymens.jpn.org/user　】</a>
-                    </div>
-                    <p>注意事項：：Google Chromeからダウンロードをおすすめいたします。他のサイトからですと不具合が生じる場合がございます。</p>
-                </div>
                 {{-- ログインボタン --}}
                 <input class="sendButton" type="submit" value="ログイン" style="margin-top: 25px" />
             </form>
