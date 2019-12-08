@@ -102,9 +102,12 @@ form{
 .rightEle > input{
     background-color: white!important;
     border-radius: 3px!important;
-    width: 60%;
+    width: 55%;
     font-size: 2.2rem;
     text-align: center;
+}
+.shooting_date{
+    font-size: 2rem!important;
 }
 
 .fontRed{

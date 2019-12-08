@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*===================================
- head
+    head
 ===================================*/
 .head h2{
     font-size: 25px;
@@ -15,11 +15,11 @@
 }
 
 /*===================================
- form
+    form
 ===================================*/
 .form-body{
     width: 90%;
-    height: 500px;
+    height: 430px;
     background-color: #c5c5e0;
     margin: auto;
     border: #7678eb solid 3px;
