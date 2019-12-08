@@ -122,4 +122,19 @@ class ManagerController extends Controller
         return redirect()->route('user_detail',['id' => $user])
                         ->with('flash_message', ' 更新が完了しました');
     }
+
+    public function editManagerForm($manager_id = null){
+        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->manager_id == 1) {
+            $manager = Manager::find($manager_id);
+            return view('manager.editManagerForm',['manager' => $manager]);
+        }else{
+            return redirect()->route('manager.loginpage');
+        }
+    }
+
+    public function storeEditManager(Request $request){
+        $manager = Manager::find($request->manager_id);
+        $manager->fill($request->all())->save();
+        return redirect()->route('manager_list');
+    }
 }
