@@ -40,7 +40,7 @@
                 {{-- ログインボタン --}}
                 <div class="flexArea">
                     <input type="hidden" name="manager_id" value="{{$manager->manager_id}}">
-                    <input class="sendButton" type="submit" value="修正する" style="margin-top:25px" />
+                    <input class="sendButton" type="submit" value="退会させる" style="margin-top:25px" />
                     <a href="{{route('manager_list')}}"class="sendButton" style="margin-top:25px">戻る</a>
                 </div>
             </form>
