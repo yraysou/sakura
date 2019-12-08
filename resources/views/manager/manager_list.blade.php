@@ -21,11 +21,17 @@
                         <tbody>
                             @foreach ($managers as $manager)
                                 @if($manager ->manager_id != 1)
-                                    <tr  class="record">
+                                    <tr class="record">
                                         <th score="row">{{$manager->store_name}}</th>
                                         <td>{{$manager->password}}</td>
                                         <td><a class ="lineHeight fontRed" href="{{ '/manager/delete_manager'.'/'.$manager->manager_id }}">削除</a></td>
-                                        <td><a href="{{route('edit.manager.form',$manager->manager_id)}}" class ="lineHeight fontRed">退会</a></td>
+                                        <td>
+                                            @if($manager->withdraw_status) 
+                                            <p class ="lineHeight fontRed">退会済</p>
+                                            @else
+                                            <a href="{{route('edit.manager.form',$manager->manager_id)}}" class ="lineHeight fontRed">退会</a>
+                                            @endif
+                                        </td>
                                     </tr> 
                                 @endif
                             @endforeach
