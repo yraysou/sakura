@@ -17,7 +17,7 @@ class ManagerController extends Controller
 {
 
     public function user_insert() {
-        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status = false) {
+        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status == false) {
             $user_id = sprintf("%06d",mt_rand(0,999999));
             $pw = substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 8);
             $dt = Carbon::now()->toDateString();
@@ -34,7 +34,7 @@ class ManagerController extends Controller
     }
 
     public function detail($user_id) {
-        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status = false) {
+        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status == false) {
             $users = User::find($user_id);
             $manager = Auth::guard('manager')->user();
             return view('manager.user_detail',[
@@ -61,7 +61,7 @@ class ManagerController extends Controller
     }
 
     public function managerList() {
-        $managers =  Manager::where('withdraw_status', false)->get();
+        $managers =  Manager::get();
         return view('manager.manager_list',[
             'managers' => $managers
         ]);
@@ -74,7 +74,7 @@ class ManagerController extends Controller
 
     public function userListSearch(Request $request)
     {
-        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status = false) {
+        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status == false) {
             //キーワード取得
             $keyword = $request->input('keyword');          
             // マネージャーIDを取得
