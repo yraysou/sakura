@@ -44735,13 +44735,13 @@ if (false) {
 /* 43 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.\n - options has an unknown property 'outputStyle'. These properties are valid:\n   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }\n    at validate (/var/www/sakura/node_modules/sass-loader/node_modules/schema-utils/dist/validate.js:85:11)\n    at Object.loader (/var/www/sakura/node_modules/sass-loader/dist/index.js:36:28)\n    at /var/www/sakura/node_modules/webpack/lib/NormalModule.js:195:19\n    at /var/www/sakura/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /var/www/sakura/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at runSyncOrAsync (/var/www/sakura/node_modules/loader-runner/lib/LoaderRunner.js:143:3)\n    at iterateNormalLoaders (/var/www/sakura/node_modules/loader-runner/lib/LoaderRunner.js:232:2)\n    at /var/www/sakura/node_modules/loader-runner/lib/LoaderRunner.js:205:4\n    at /var/www/sakura/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:70:14\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)");
 
 /***/ }),
 /* 44 */
 /***/ (function(module, exports) {
 
-// removed by extract-text-webpack-plugin
+throw new Error("Module build failed: ModuleBuildError: Module build failed: ValidationError: Invalid options object. Sass Loader has been initialised using an options object that does not match the API schema.\n - options has an unknown property 'outputStyle'. These properties are valid:\n   object { implementation?, sassOptions?, prependData?, sourceMap?, webpackImporter? }\n    at validate (/var/www/sakura/node_modules/sass-loader/node_modules/schema-utils/dist/validate.js:85:11)\n    at Object.loader (/var/www/sakura/node_modules/sass-loader/dist/index.js:36:28)\n    at /var/www/sakura/node_modules/webpack/lib/NormalModule.js:195:19\n    at /var/www/sakura/node_modules/loader-runner/lib/LoaderRunner.js:367:11\n    at /var/www/sakura/node_modules/loader-runner/lib/LoaderRunner.js:233:18\n    at runSyncOrAsync (/var/www/sakura/node_modules/loader-runner/lib/LoaderRunner.js:143:3)\n    at iterateNormalLoaders (/var/www/sakura/node_modules/loader-runner/lib/LoaderRunner.js:232:2)\n    at /var/www/sakura/node_modules/loader-runner/lib/LoaderRunner.js:205:4\n    at /var/www/sakura/node_modules/enhanced-resolve/lib/CachedInputFileSystem.js:70:14\n    at processTicksAndRejections (internal/process/task_queues.js:75:11)");
 
 /***/ })
 /******/ ]);
