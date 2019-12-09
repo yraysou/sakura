@@ -64,7 +64,7 @@ Route::get('/manager/user_list','Manager\ManagerController@userListSearch')->nam
 Route::get('/manager/user_detail/{user_id}','Manager\ManagerController@detail')->name('user_detail');
 
 // ユーザ削除
-Route::get('/manager/delete/{user_id}/{keyword?}','Manager\ManagerController@delete')->name('user_delete');
+Route::get('/manager/delete/{user_id?}/{keyword?}','Manager\ManagerController@delete')->name('user_delete');
 
 // ユーザー更新
 Route::post('/user/update','Manager\ManagerController@userUpdate')->name('userUpdate');

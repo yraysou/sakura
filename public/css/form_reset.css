@@ -3,7 +3,8 @@
 
 /*text*/
 input[type="text"],
-input[type="password"]  {
+input[type="password"],
+input[type="date"] {
     padding: 0;
     border: none;
     border-radius: 0;

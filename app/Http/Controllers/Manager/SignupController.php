@@ -65,8 +65,8 @@ class SignupController extends Controller
                 $user->print = $request->file('print')->store('public/'.$store_name."/".$userId);
             }
             // se用写真
-            if($request->se){
-                $user->se = $request->file('se')->store('public/'.$store_name."/".$userId);
+            if($request->es){
+                $user->es = $request->file('es')->store('public/'.$store_name."/".$userId);
             }
 
             $a_year_later = Carbon::parse($request->shooting_date)->addYear();

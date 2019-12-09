@@ -1,43 +1,51 @@
-@media screen and (max-width:480px){
+@media screen and (max-width:479px){
+    #mainBlk{
+        height: 100vh!important;
+        padding: 2%;
+    }
+
     #wrap {
         padding-top: 0;
         background-color: antiquewhite;
-        height: 90vh;
+        height: 90%;
     }
+
     .sendButton, input[type="submit"].sendButton {
-        width: 170px;
+        width: 60%;
         font-size: 1.5rem;
     }
+
     .form-body {
-        height: 380px;
+        height: 70vh;;
     }
+
     .photoArea {
         margin: 0 auto;
-        margin-left: 23%;
-        margin-right: 28%;
-        text-align: center;
-        overflow-x: auto;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
+        height: 280px;
     }
-    .photoEle {
-        /* 横スクロール */
-        display: inline-block;
-        width: 100%;
 
-         /* 見た目調整 */
-        margin-right: 15%;
-        text-align: center;
+    .photoEle {
+        width: 200px;
+        height: 300px;
     }
-    /* .printImg, .esImg {
+
+    .photoEle img{
+        width: 200px;
+        height: 240px;
+        object-fit: contain;    
+    }
+
+    .printImg, .esImg {
         display: none;
-    } */
+    }
     .bottomEle {
         display: block;
         margin: 0 auto;
+        margin-top: 3%;
     }
     .left {
         width: 100%;
+        margin-top: 20px;
     }
     .left > h2 {
         font-size: 2.3rem;
@@ -74,12 +82,16 @@
     .getWrapper {
         display:inline-block;
         width: 90%;
+        margin-left: 22px;
     } 
     .getList {
-        margin: 25px auto;
+        margin: 7px auto;
     }
     .getImage {
-        margin: 25px 0;
+        margin: 7px 0;
         width: 45%;
     }  
-} 
+    
+}
+
+

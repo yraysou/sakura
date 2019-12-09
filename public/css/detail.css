@@ -17,8 +17,8 @@
 .photoEle > img{
     margin: 0 auto;
     display: block;
-    height: 22vw;
-    object-fit: cover;
+    width: 220px; height: 220px;
+    object-fit: contain;
 }
 
 .photoEle > span {
@@ -39,17 +39,17 @@
 }
 
 .left > h2 {
-    font-size: 2.5vw;
+    font-size: 1.8vw;
     font-weight: 700;
 }
 
 .left > h3 {
-    font-size: 1.8vw;
+    font-size: 1.4vw;
     font-weight: 600;
 }
 
 .left > p {
-    font-size: 1.9vw;
+    font-size: 2rem;
 }
 
 form{
@@ -72,12 +72,12 @@ form{
 .rightEle {
     display: flex;
     height: 37px;
-    font-size: 2.8vw;
+    font-size: 2vw;
     margin-top: 7px;
 }
 
 .year{
-    font-size: 2.9rem;
+    font-size: 2.3vw;
 }
 
 .rightEle > p {
@@ -102,14 +102,22 @@ form{
 .rightEle > input{
     background-color: white!important;
     border-radius: 3px!important;
-    width: 60%;
-    font-size: 2.4rem;
+    width: 55%;
+    font-size: 2.2rem;
     text-align: center;
+}
+.shooting_date{
+    font-size: 2rem!important;
 }
 
 .fontRed{
     color:red;
     font-weight: 800;
+}
+
+.more{
+    margin-top: 10px!important;
+    margin-left: 150px!important;
 }
 
 .linkBtn{
@@ -125,8 +133,117 @@ form{
     background-color: #ff9900;
 }
 
+.qrCss{
+    display: none;
+}
+
+.popUp{
+    z-index: 110;
+    width: 50rem;
+    top: 50%;
+    left: 0px;
+    right: 0px;
+    margin: 0 auto;
+    transform: translateY(-50%);
+    position: fixed;
+    background-color:white;
+    border-radius: 20px;
+}
+
+.popUp-wrapper{
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
+    margin-bottom: 105px; 
+    display: flex;
+}
+
+.popUp-wrapper p{
+    color: #ff9900;;
+}
+
+.popUp-list{
+    margin-left: 85px;
+    margin-right: 85px;
+    color: #ff9900;
+}
+
+.backImg{
+    z-index: 105;
+    position: fixed;
+    background-color: #7678eb;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+}
+
+.popUp--btn{
+    width: 9rem;
+    margin: 0 auto;
+    border: solid 2px #ff9900;
+    border-radius: 10px;
+    padding: 3px 30px;
+    color: #ff9900;
+}
+
+.popUp--btn:hover{
+    background-color: #ff9900;
+}
+
+.popUp--btn p:hover{
+    color: white;
+}
+
+
+.max{
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+
+.more{
+    cursor: pointer;
+}
+
+.my-parts {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    text-align: right;
+}
+
+.my-parts span::before,
+.my-parts span::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 780%;
+    width: 84%;
+    height: 16%;
+    margin: -8% 0 0 -42%;
+    background: #ff9900;
+}
+.my-parts span::before {
+    transform: rotate(-45deg);
+}
+.my-parts span::after {
+    transform: rotate(45deg);
+}
+
 @media print {
     .linkBtn{
         display: none;
     }
-}     
+}
+
+@media (max-width:750px) {
+    .left > p {
+        font-size: 2.6vw;
+    }
+}

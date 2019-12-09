@@ -27,7 +27,7 @@ class User extends Authenticatable
         'manager_id',
         'original',
         'print',
-        'se',
+        'es',
         'shooting_date',
         'a_year_later',
         'agreement_status',
