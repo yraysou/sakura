@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 /*===================================
- head
+    head
 ===================================*/
 .head h2{
     font-size: 25px;
@@ -15,7 +15,7 @@
 }
 
 /*===================================
- form
+    form
 ===================================*/
 .form-body{
     width: 90%;
@@ -52,3 +52,24 @@
     border-radius: 5px;;
 }
 
+.check{
+    width: 70%;
+    color: red;
+    margin-left: 19%;
+    font-size: 1.8rem;
+}
+
+.check-wrapper{
+    margin-bottom: 10px;
+    color: black;
+}
+
+.check-wrapper a{
+    cursor: pointer;
+}
+
+.flexArea{
+    width: 70%;
+    display: flex;
+    margin: 0 auto;
+}

@@ -52,7 +52,6 @@ class LoginController extends Controller
                 return redirect()->route('user_list');
             }
         }else {
-            $store = Manager::get();
             return view('manager.login');
         }
     }
@@ -66,6 +65,7 @@ class LoginController extends Controller
     {
         $manager = Manager::Where('store_name',$request->store_name)
             ->where('password',$request->password)
+            ->where('withdraw_status', false)
             ->first();
             // dd($manager);
         if($manager){
