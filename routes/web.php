@@ -45,6 +45,10 @@ Route::get('/manager/logout', 'Manager\Auth\LoginController@logout')->name('mana
 Route::get('/manager/managerCreateForm','Manager\SignupController@managerCreateForm')->name('manager.createForm');
 Route::post('/manager/managerCreate','Manager\SignupController@managerCreate')->name('manager.create');
 
+// 店舗編集
+Route::get('manager/edit_manager/form/{id?}','Manager\ManagerController@editManagerForm')->name('edit.manager.form');
+Route::post('manager/edit_manager','Manager\ManagerController@storeEditManager')->name('store.edit.manager');
+
 // 店舗一覧
 Route::get('manager/manager_list','Manager\ManagerController@managerList')->name('manager_list');
 

@@ -17,7 +17,7 @@ class ManagerController extends Controller
 {
 
     public function user_insert() {
-        if(Auth::guard('manager')->check()) {
+        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status == false) {
             $user_id = sprintf("%06d",mt_rand(0,999999));
             $pw = substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 8);
             $dt = Carbon::now()->toDateString();
@@ -34,7 +34,7 @@ class ManagerController extends Controller
     }
 
     public function detail($user_id) {
-        if(Auth::guard('manager')->check()) {
+        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status == false) {
             $users = User::find($user_id);
             $manager = Auth::guard('manager')->user();
             return view('manager.user_detail',[
@@ -74,7 +74,7 @@ class ManagerController extends Controller
 
     public function userListSearch(Request $request)
     {
-        if(Auth::guard('manager')->check()) {
+        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status == false) {
             //キーワード取得
             $keyword = $request->input('keyword');          
             // マネージャーIDを取得
@@ -121,5 +121,21 @@ class ManagerController extends Controller
         $user->save();
         return redirect()->route('user_detail',['id' => $user])
                         ->with('flash_message', ' 更新が完了しました');
+    }
+
+    public function editManagerForm($manager_id = null){
+        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->manager_id == 1) {
+            $manager = Manager::find($manager_id);
+            return view('manager.editManagerForm',['manager' => $manager]);
+        }else{
+            return redirect()->route('manager.loginpage');
+        }
+    }
+
+    public function storeEditManager(Request $request){
+        $manager = Manager::find($request->manager_id);
+        $manager->withdraw_status = true;
+        $manager->fill($request->all())->save();
+        return redirect()->route('manager_list');
     }
 }
