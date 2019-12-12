@@ -15,7 +15,7 @@
         @yield('ogp')
 
         <link rel="stylesheet" type="text/css" href="{{asset('/css/reset.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{asset('/css/base.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{asset('/css/_base.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('/css/base_pc.css')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('/css/nav_mobi.css?cacherefResh19111')}}">
         <link rel="stylesheet" type="text/css" href="{{asset('/css/index.css?cacherefResh19111')}}">
