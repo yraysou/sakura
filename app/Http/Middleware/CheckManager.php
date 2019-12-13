@@ -18,7 +18,7 @@ class CheckManager
     {
         if (!Auth::guard('manager')->check()) {
             return redirect()->route('manager.loginpage');
-        }else if(Auth::guard('manager')->user()->login_status == false){
+        }else if(Auth::guard('manager')->user()->login_status == 0){
             Auth::guard('manager')->logout();
             return redirect()->route('manager.loginpage');
         }
