@@ -14,7 +14,7 @@ class AddWithdrawToManagerTable extends Migration
     public function up()
     {
         Schema::table('manager', function (Blueprint $table) {
-            $table->boolean('withdraw_status')->default(false);
+            $table->boolean('edit_status')->default(false);
         });
     }
 
