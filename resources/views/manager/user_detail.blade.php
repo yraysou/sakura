@@ -2,31 +2,15 @@
 
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{asset('/css/detail.css?cacherefResh19111')}}">
-    <link rel="stylesheet" id="cs" type="text/css" href="{{asset('/css/detail_print.css?cacherefResh19111')}}">
-    {{-- <link rel="stylesheet" id="2"  type="text/css" href="{{asset('/css/little_print.css?cacherefResh19111')}}"> --}}
+    <link rel="stylesheet" id="large" type="text/css" href="{{asset('/css/detail_print.css?cacherefResh19111')}}" media="print">
+    <link rel="stylesheet" id="small" type="text/css" href="{{asset('/css/little_print.css?cacherefResh19111')}}" media="print">
+    <link id="addClass">
     @endsection
 
 @section('js')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script type="text/javascript" src="{{asset('/js/modal.js?cacherefResh19111')}}"></script>
-
-    <script>
-        function changeCss(){
-            document.getElementById("cs").href = "{{asset('/css/detail_print.css?cacherefResh19111')}}";
-        }
-
-        function changeEle(){
-            document.getElementById("cs").href = "{{asset('/css/little_print.css?cacherefResh19111')}}";
-        }
-        
-        function setHref( $href ) {
-            jQuery( '#cs' ).attr( 'href', $href );
-            window.print();
-            return false;
-        }
-    </script>
 @endsection
 
 @section('main')    
@@ -98,12 +82,12 @@
             <img src="{{ asset('image/pro.png') }}" alt="">
         </div>    
         <div class="linkList">
-            <a class="linkBtn" href="#" onclick="setHref('{{asset('/css/detail_print.css?cacherefResh19111')}}');changeEle();">このページをA4印刷</a>
+            <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/little_print.css?cacherefResh19111')}}', 'small');">A4印刷</a>
+            <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/detail_print.css?cacherefResh19111')}}', 'large');">L版印刷</a>
             <a class="linkBtn" href="/manager/user_list">一覧へ戻る</a>
-            <a class="linkBtn" href="#" onclick="setHref('{{asset('/css/little_print.css?cacherefResh19111')}}');changeCss();">このページをL版印刷</a>
         </div>
         <div class="popUp" id="popupBg" hidden>
-            <div class="my-parts" onclick="popupClose()" onload="onLoad()><span></span></div>
+            <div class="my-parts" onclick="popupClose()" onload="onLoad()"><span></span></div>
             <div class="popUp-list">
                 <div class="max">
                     <p>本当に更新しますか？</p>
@@ -117,3 +101,20 @@
         <div class="backImg update"onclick="popupClose()" hidden></div>
     </div>
 @endsection
+@section('bodyScripts')
+<script>
+    function changeCss($deleteHref, idName){
+        const style_link = $('<link>').attr({
+            'rel': 'stylesheet',
+            'href': $deleteHref,
+            'media':'print',
+            'id': idName
+        });
+        $("#"+idName).remove();
+        window.print();
+        $('body').append(style_link);
+        return false;
+    }
+</script>
+@endsection
+
