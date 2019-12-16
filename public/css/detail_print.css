@@ -83,6 +83,16 @@
         display: none;
     }
 
+    .time input{
+        width:100%;
+        margin-right: -10px;
+        font-size: 1.5rem!important;
+    }
+
+    .time{
+        margin-right: -50px;
+    }
+
     .qrCss{
         display: inline;
     }
@@ -90,4 +100,17 @@
     /* .popUp{
         display: none;
     } */
+    
 }     
+
+@media print {
+    .linkBtn{
+        display: none;
+    }
+}
+
+@media (max-width:750px) {
+    .left > p {
+        font-size: 2.6vw;
+    }
+}
