@@ -41,34 +41,36 @@ Route::post('/manager/login', 'Manager\Auth\LoginController@login')->name('manag
 
 Route::get('/manager/logout', 'Manager\Auth\LoginController@logout')->name('manager.logout');
 
-// 店舗登録
-Route::get('/manager/managerCreateForm','Manager\SignupController@managerCreateForm')->name('manager.createForm');
-Route::post('/manager/managerCreate','Manager\SignupController@managerCreate')->name('manager.create');
+Route::group(['middleware'=>'checkManager'],function(){
+    // 店舗登録
+    Route::get('/manager/managerCreateForm','Manager\SignupController@managerCreateForm')->name('manager.createForm');
+    Route::post('/manager/managerCreate','Manager\SignupController@managerCreate')->name('manager.create');
 
-// 店舗編集
-Route::get('manager/edit_manager/form/{id?}','Manager\ManagerController@editManagerForm')->name('edit.manager.form');
-Route::post('manager/edit_manager','Manager\ManagerController@storeEditManager')->name('store.edit.manager');
+    // 店舗編集
+    Route::get('manager/edit_manager/form/{id?}','Manager\ManagerController@editManagerForm')->name('edit.manager.form');
+    Route::post('manager/edit_manager','Manager\ManagerController@storeEditManager')->name('store.edit.manager');
 
-// 店舗一覧
-Route::get('manager/manager_list','Manager\ManagerController@managerList')->name('manager_list');
+    // 店舗一覧
+    Route::get('manager/manager_list','Manager\ManagerController@managerList')->name('manager_list');
 
-// 店舗削除
-Route::get('/manager/delete_manager/{manager_id}','Manager\ManagerController@deleteManager')->name('manager_delete');
+    // 店舗削除
+    Route::get('/manager/delete_manager/{manager_id}','Manager\ManagerController@deleteManager')->name('manager_delete');
 
-// 新規登録処理
-Route::post('/sign_up', 'Manager\SignupController@userCreate')->name('user.create');
+    // 新規登録処理
+    Route::post('/sign_up', 'Manager\SignupController@userCreate')->name('user.create');
 
-// 管理者表示画面
-Route::get('/manager/user_insert', 'Manager\ManagerController@user_insert')->name('user_insert');
+    // 管理者表示画面
+    Route::get('/manager/user_insert', 'Manager\ManagerController@user_insert')->name('user_insert');
 
-// ユーザ一覧画面
-Route::get('/manager/user_list','Manager\ManagerController@userListSearch')->name('user_list');
+    // ユーザ一覧画面
+    Route::get('/manager/user_list','Manager\ManagerController@userListSearch')->name('user_list');
 
-// ユーザ詳細画面
-Route::get('/manager/user_detail/{user_id}','Manager\ManagerController@detail')->name('user_detail');
+    // ユーザ詳細画面
+    Route::get('/manager/user_detail/{user_id}','Manager\ManagerController@detail')->name('user_detail');
 
-// ユーザ削除
-Route::get('/manager/delete/{user_id?}/{keyword?}','Manager\ManagerController@delete')->name('user_delete');
+    // ユーザ削除
+    Route::get('/manager/delete/{user_id?}/{keyword?}','Manager\ManagerController@delete')->name('user_delete');
 
-// ユーザー更新
-Route::post('/user/update','Manager\ManagerController@userUpdate')->name('userUpdate');
+    // ユーザー更新
+    Route::post('/user/update','Manager\ManagerController@userUpdate')->name('userUpdate');
+});

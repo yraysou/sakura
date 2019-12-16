@@ -17,33 +17,26 @@ class ManagerController extends Controller
 {
 
     public function user_insert() {
-        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status == false) {
-            $user_id = sprintf("%06d",mt_rand(0,999999));
-            $pw = substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 8);
-            $dt = Carbon::now()->toDateString();
-            $manager_id = Auth::guard('manager')->user()->manager_id;
-            return view('manager.user_insert',[
-                "user_id" => $user_id,
-                "pw" => $pw,
-                "dt" => $dt,
-                "manager_id" => $manager_id
-            ]);
-        }else{
-            return redirect()->route('manager.loginpage');
-        }
+        $user_id = sprintf("%06d",mt_rand(0,999999));
+        $pw = substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 8);
+        $dt = Carbon::now()->toDateString();
+        $manager_id = Auth::guard('manager')->user()->manager_id;
+        return view('manager.user_insert',[
+            "user_id" => $user_id,
+            "pw" => $pw,
+            "dt" => $dt,
+            "manager_id" => $manager_id
+        ]);
+
     }
 
     public function detail($user_id) {
-        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status == false) {
-            $users = User::find($user_id);
-            $manager = Auth::guard('manager')->user();
-            return view('manager.user_detail',[
-                'users' => $users,
-                'manager' => $manager,
-            ]);
-        }else {
-            return redirect()->route('manager.loginpage');
-        }
+        $users = User::find($user_id);
+        $manager = Auth::guard('manager')->user();
+        return view('manager.user_detail',[
+            'users' => $users,
+            'manager' => $manager,
+        ]);
     }
 
     public function delete($user_id,$keyword = null) {
@@ -74,41 +67,36 @@ class ManagerController extends Controller
 
     public function userListSearch(Request $request)
     {
-        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->withdraw_status == false) {
-            //キーワード取得
-            $keyword = $request->input('keyword');          
-            // マネージャーIDを取得
-            $manager_id = Auth::guard('manager')->user()->manager_id;
-            
-            //キーワード入力されている場合
-            if(!empty($keyword))
-            {   
-                //  ユーザーから検索
-                $users = DB::table('users')
-                        ->where('user_id','like','%'.$keyword.'%')
-                        ->orwhere('name','like', '%'.$keyword.'%')
-                        ->orwhere('tel_number','like', '%'.$keyword.'%')
-                        ->where("manager_id",$manager_id)
-                        // データ降順表示
-                        ->latest()
-                        ->get();
+        //キーワード取得
+        $keyword = $request->input('keyword');          
+        // マネージャーIDを取得
+        $manager_id = Auth::guard('manager')->user()->manager_id;
+        
+        //キーワード入力されている場合
+        if(!empty($keyword))
+        {   
+            //  ユーザーから検索
+            $users = DB::table('users')
+                    ->where('user_id','like','%'.$keyword.'%')
+                    ->orwhere('name','like', '%'.$keyword.'%')
+                    ->orwhere('tel_number','like', '%'.$keyword.'%')
+                    ->where("manager_id",$manager_id)
+                    // データ降順表示
+                    ->latest()
+                    ->get();
 
-            }else{//キーワードが未入力の場合
-                $users = DB::table('users')
-                        ->where("manager_id",$manager_id)
-                        // データ降順表示
-                        ->latest()
-                        ->get();
-            }
-            //検索フォームへ
-            return view('manager/user_list',[
-                'users' => $users,
-                'keyword' => $keyword,
-                ]);
-                
-        }else {
-            return redirect()->route('manager.loginpage');
-        }    
+        }else{//キーワードが未入力の場合
+            $users = DB::table('users')
+                    ->where("manager_id",$manager_id)
+                    // データ降順表示
+                    ->latest()
+                    ->get();
+        }
+        //検索フォームへ
+        return view('manager/user_list',[
+            'users' => $users,
+            'keyword' => $keyword,
+        ]);
     }
     
     //  ユーザーデータ更新
@@ -124,17 +112,14 @@ class ManagerController extends Controller
     }
 
     public function editManagerForm($manager_id = null){
-        if(Auth::guard('manager')->check() && Auth::guard('manager')->user()->manager_id == 1) {
-            $manager = Manager::find($manager_id);
-            return view('manager.editManagerForm',['manager' => $manager]);
-        }else{
-            return redirect()->route('manager.loginpage');
-        }
+        $manager = Manager::find($manager_id);
+        return view('manager.editManagerForm',['manager' => $manager]);
     }
 
     public function storeEditManager(Request $request){
         $manager = Manager::find($request->manager_id);
-        $manager->withdraw_status = true;
+        $manager->edit_status = true;
+        $manager->login_status = false;
         $manager->fill($request->all())->save();
         return redirect()->route('manager_list');
     }

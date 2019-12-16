@@ -65,10 +65,10 @@ class LoginController extends Controller
     {
         $manager = Manager::Where('store_name',$request->store_name)
             ->where('password',$request->password)
-            ->where('withdraw_status', false)
             ->first();
-            // dd($manager);
         if($manager){
+            $manager->login_status = true;
+            $manager->save();
             Auth::guard('manager')->login($manager, true);
             if($manager->manager_id == 1){
                 return redirect()->route('manager_list');

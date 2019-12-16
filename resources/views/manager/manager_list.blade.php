@@ -13,8 +13,8 @@
                         <tr>
                             <th class="column">店舗名</th>
                             <th class="column">password</th>
+                            <th class="link">編集</th>
                             <th class="link">削除</th>
-                            <th class="link">退会</th>
                         </tr>
                     </thead>
                     @if (count($managers))
@@ -24,14 +24,16 @@
                                     <tr class="record">
                                         <th score="row">{{$manager->store_name}}</th>
                                         <td>{{$manager->password}}</td>
-                                        <td><a class ="lineHeight fontRed" href="{{ '/manager/delete_manager'.'/'.$manager->manager_id }}">削除</a></td>
                                         <td>
-                                            @if($manager->withdraw_status) 
-                                            <p class ="lineHeight fontRed">退会済</p>
+                                            <a href="{{route('edit.manager.form',$manager->manager_id)}}" class ="lineHeight fontWhite">
+                                            @if($manager->edit_status) 
+                                            編集済
                                             @else
-                                            <a href="{{route('edit.manager.form',$manager->manager_id)}}" class ="lineHeight fontRed">退会</a>
+                                            編集
                                             @endif
+                                            </a>
                                         </td>
+                                        <td><a class ="lineHeight fontRed" href="{{ '/manager/delete_manager'.'/'.$manager->manager_id }}">削除</a></td>
                                     </tr> 
                                 @endif
                             @endforeach

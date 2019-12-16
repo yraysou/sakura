@@ -19,6 +19,7 @@ class Manager extends Authenticatable
     protected $fillable = [
         'store_name',
         'password',
+        'edit_status',
     ];
     protected $hidden = [
         'password',
