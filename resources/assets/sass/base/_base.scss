@@ -1,0 +1,64 @@
+/*===================================
+　共通
+===================================*/
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    font-size: 1.6rem;
+    font-feature-settings: "palt";
+    letter-spacing: 0.025em;
+    -webkit-font-smoothing: antialiased;
+}
+img{
+    max-width:100%;
+    height: auto;
+    vertical-align: top;
+}
+
+#wrap{
+    font-family: 'Ropa Sans', "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+    font-size: 1.6rem;
+    background: #fff;
+    color: #231815;
+    letter-spacing: 1.5px;
+    line-height: 1.2;
+    /*文字詰*/
+    -webkit-font-feature-settings: 'palt' 1;
+    font-feature-settings: 'palt' 1;
+    /*ブラウザごとに太さが違う見え方の調整*/
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+img{
+    max-width:100%;
+    height: auto;
+    vertical-align: top;
+}
+
+.text-center{
+    text-align: center;
+}
+/*--- clearfix ---*/
+.clearfix {
+    zoom: 1;
+    &::before,
+    &::after{
+        content: "";
+        display: table;
+    }
+    ::after{
+        clear: both;
+    }
+}
+/* aタグ
+-------------------------------*/
+.hoverAnimation,
+.hoverAnimation li{
+    transition: 200ms ease-out;
+}

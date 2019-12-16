@@ -1,0 +1,234 @@
+@charset "UTF-8";
+
+/*===================================
+  reset CSS
+===================================*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*  reset
+===================================*/
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: #464646;
+  -webkit-transition: 200ms ease-out;
+  transition: 200ms ease-out;
+}
+
+/*===================================
+　共通
+===================================*/
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "\6E38\30B4\30B7\30C3\30AF\4F53", YuGothic, "\6E38\30B4\30B7\30C3\30AF   Medium", "Yu Gothic Medium", "\6E38\30B4\30B7\30C3\30AF", "Yu Gothic", sans-serif;
+  font-size: 1.6rem;
+  -webkit-font-feature-settings: "palt";
+          font-feature-settings: "palt";
+  letter-spacing: 0.025em;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+#wrap {
+  font-family: 'Ropa Sans', "\6E38\30B4\30B7\30C3\30AF", YuGothic, "\30D2\30E9\30AE\30CE\89D2\30B4   Pro", "Hiragino Kaku Gothic Pro", "\30E1\30A4\30EA\30AA", "Meiryo", sans-serif;
+  font-size: 1.6rem;
+  background: #fff;
+  color: #231815;
+  letter-spacing: 1.5px;
+  line-height: 1.2;
+  /*文字詰*/
+  -webkit-font-feature-settings: 'palt' 1;
+  font-feature-settings: 'palt' 1;
+  /*ブラウザごとに太さが違う見え方の調整*/
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*--- clearfix ---*/
+
+.clearfix {
+  zoom: 1;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+}
+
+.clearfix ::after {
+  clear: both;
+}
+
+/* aタグ
+-------------------------------*/
+
+.hoverAnimation,
+.hoverAnimation li {
+  -webkit-transition: 200ms ease-out;
+  transition: 200ms ease-out;
+}
+
