@@ -1,0 +1,87 @@
+#wrap{
+    padding-top: 0px;
+}
+
+.sideSpace{
+    margin-top: -40px;
+}
+
+.original{
+    display: none;
+}
+
+.print{
+    display: none;
+}
+
+.esImg{
+    text-indent:100%;
+    overflow:hidden;
+    white-space:nowrap;
+}
+
+.es img{
+    height: 45vh;
+    width:80vw;
+}
+
+.es{
+    margin-left: 80px;
+}
+
+.left{
+    display: none;
+}
+
+.mix{
+    display: inline;
+    margin-top: 80px;
+}
+
+.fontRed{
+    font-size: 2.1rem;
+}
+
+.small_msg{
+    display: none;
+}
+
+.linkBtn{
+    display: none;
+}
+
+.qrCss{
+    display: inline;
+}
+
+.rightEle{
+    font-size: 2rem;
+    margin-top: -1px;
+}
+
+.rightEle input{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.time input{
+    width:100%;
+    margin-right: -10px;
+}
+
+.time{
+    margin-right: -50px;
+}
+
+.tel{
+    display: none;
+}
+
+.bottomEle{
+    border:solid 6px antiquewhite;
+    border-radius: 5px;
+    height: 29vh;
+    padding-right: 95px;
+    padding-left: 10px;
+    padding-top: 15px;
+}

@@ -65,8 +65,13 @@ input.disabled{
     opacity: 0.6;
 }
 
+.sendButton{
+    height: 60px;
+    font-size:2rem!important;
+}
+
 #mainBlk{
-    padding-bottom: 80px!important;
+    padding-bottom: 90px!important;
 }
 
 #wrap{

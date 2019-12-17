@@ -1,93 +1,111 @@
-@media print {
-    #wrap{
-        padding-top: 0px;
-    }
+#wrap{
+    padding-top: 0px;
+}
 
-    .sideSpace{
-        margin-top: -40px;
-    }
+.sideSpace{
+    margin-top: -40px;
+}
 
-    .allContents{
-        border:solid 6px antiquewhite;
-        border-radius: 5px;
-        height: 438px;
-    }
+.allContents{
+    border:solid 6px antiquewhite;
+    border-radius: 5px;
+    height: 438px;
+}
 
-    .linkBtn{
-        display: none;
-    }
+.linkBtn{
+    display: none;
+}
 
-    .procedure{
-        display: inline;
-    }
+.procedure{
+    display: inline;
+}
 
-    .procedure img{
-        height:500px;
-        width:55%;
-        margin-top: 1px;
-    }
+.procedure img{
+    height:500px;
+    width:55%;
+    margin-top: 1px;
+}
 
-    .bottomEle{
-        margin-top: -17px
-    }
+.bottomEle{
+    margin-top: -17px
+}
 
-    left h3{
-        text-align: none;
-    }
+left h3{
+    text-align: none;
+}
 
-    .photoEle > img{
-        height: 90px;
-    }
+.photoEle > img{
+    height: 90px;
+}
 
-    .rightEle{
-        font-size: 15px;
-        margin-top: -8px;
-        font-weight: 600;
-    }
+.rightEle{
+    font-size: 15px;
+    margin-top: -8px;
+    font-weight: 600;
+}
 
-    .rightEle > input{
-        font-size: 16px;
-        font-weight: 600;
-        margin-top: -15px;
-    }
+.rightEle > input{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: -15px;
+}
 
 
-    .rightEle > span{
-        font-size: 16px;
-    }
+.rightEle > span{
+    font-size: 16px;
+}
 
-    .year{
-        font-size: 2rem;
-    }
+.year{
+    font-size: 2rem;
+}
 
-    .left > h2 {
-        font-size: 2rem;
-        font-weight: 700;
-    }
-    
-    .left > h3 {
-        display: none;
-    }
-    
+.left > h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.left > h3 {
+    display: none;
+}
+
+.left > p {
+    font-size: 1.6rem;
+}
+
+.small_msg{
+    text-indent:100%;
+    overflow:hidden;
+    white-space:nowrap;
+} 
+
+.tel{
+    display: none;
+}
+
+.time input{
+    width:100%;
+    margin-right: -10px;
+    font-size: 1.5rem!important;
+}
+
+.time{
+    margin-right: -50px;
+}
+
+.qrCss{
+    display: inline;
+}
+
+/* .popUp{
+    display: none;
+} */
+
+.linkBtn{
+    display: none;
+}
+
+@media (max-width:750px) {
     .left > p {
-        font-size: 1.6rem;
+        font-size: 2.6vw;
     }
-
-    .small_msg{
-        text-indent:100%;
-        overflow:hidden;
-        white-space:nowrap;
-    } 
-
-    .tel{
-        display: none;
-    }
-
-    .qrCss{
-        display: inline;
-    }
-
-    /* .popUp{
-        display: none;
-    } */
-}     
+}
