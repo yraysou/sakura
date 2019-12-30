@@ -18,7 +18,7 @@ class ManagerController extends Controller
 
     public function user_insert() {
         $user_id = sprintf("%06d",mt_rand(0,999999));
-        $pw = substr(str_shuffle('1234567890abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, 8);
+        $pw = substr(str_shuffle('234567890abcdefghijklmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ'), 0, 8);
         $dt = Carbon::now()->toDateString();
         $manager_id = Auth::guard('manager')->user()->manager_id;
         return view('manager.user_insert',[
