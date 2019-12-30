@@ -2,10 +2,6 @@
     padding-top: 0px;
 }
 
-.sideSpace{
-    margin-top: -40px;
-}
-
 .original{
     display: none;
 }
@@ -21,12 +17,13 @@
 }
 
 .es img{
-    height: 45vh;
-    width:80vw;
+    height: 50vw;
+    width: 50vw;
 }
 
-.es{
-    margin-left: 80px;
+.photoArea{
+    margin: 0 auto;
+    text-align: center;
 }
 
 .left{
@@ -35,11 +32,7 @@
 
 .mix{
     display: inline;
-    margin-top: 80px;
-}
-
-.fontRed{
-    font-size: 2.1rem;
+    margin-top: 7rem;
 }
 
 .small_msg{
@@ -84,4 +77,21 @@
     padding-right: 95px;
     padding-left: 10px;
     padding-top: 15px;
+}
+
+.fontRed{
+    font-size: 1.8rem;
+    margin-bottom: 2.4rem;
+    line-height: 1.5;
+}
+
+.printUrl-wrap{
+    display: inline-block;
+}
+.printUrl-descript{
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+.printUrl{
+    font-size: 2.3rem;
 }

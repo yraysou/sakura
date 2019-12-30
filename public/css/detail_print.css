@@ -69,7 +69,8 @@ left h3{
 }
 
 .left > p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+    line-height: 1.6;
 }
 
 .small_msg{
@@ -99,13 +100,21 @@ left h3{
 /* .popUp{
     display: none;
 } */
+.fontRed{
+    margin-bottom: 15px;
+}
 
 .linkBtn{
     display: none;
 }
 
-@media (max-width:750px) {
-    .left > p {
-        font-size: 2.6vw;
-    }
+.printUrl-wrap{
+    display: inline-block;
+}
+.printUrl-descript{
+    font-size: 1.4rem;
+    line-height: 1.6;
+}
+.printUrl{
+    font-size: 2.3rem;
 }
