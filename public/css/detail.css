@@ -37,6 +37,9 @@
 .mix{
     display: none;
 }
+.printUrl-wrap{
+    display: none;
+}
 
 .left {
     width: 50%;
@@ -54,6 +57,7 @@
 
 .left > p {
     font-size: 2rem;
+    line-height: 1.5;
 }
 
 form{

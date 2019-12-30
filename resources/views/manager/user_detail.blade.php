@@ -31,18 +31,24 @@
                 <div class="left">
                     <h2>画像取得方法の説明</h2>
                     <p>/--------------------------------</p>
-                    <p>記載されているID、PassWordを入力し、ログインしたら</p>
-                    <p>欲しい写真を選択し、</p>
+                    <p>記載されているID、PassWordを入力し、</p>
+                    <p>ログインし欲しい写真を選択して、</p>
                     <p>写真をダウンロードして下さい。</p>
-                    <h3>※手順がわからない方は手順を見ながら</h3>
-                    <h3>操作を進めてください。</h3>
                     <p>--------------------------------/</p>
                     <p class="fontRed">使用可能期限:<span class="year">{{ $users->a_year_later }}</span><br/>
                     忘れずにデータを取得してください</p>
+                    <div class="printUrl-wrap">
+                        <p class="printUrl-descript">パソコンをご利用の場合は<br>下記のURLからダウンロードください。</p>
+                        <p class="printUrl">{{route('user.loginpage')}}</p>
+                    </div>
                 </div>
                     <div class="mix">
                         <p class="fontRed">使用可能期限:<span class="mixEle">{{ $users->a_year_later }}</span><br/>
-                        忘れずにデータを取得してください</p>            
+                        忘れずにデータを取得してください</p>
+                        <div class="printUrl-wrap">
+                            <p class="printUrl-descript">パソコンをご利用の場合は<br>下記のURLからダウンロードください。</p>
+                            <p class="printUrl">{{route('user.loginpage')}}</p>
+                        </div>
                     </div>
                     <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post" name="form1">
                             {{ csrf_field() }}
@@ -83,7 +89,7 @@
         </div>    
         <div class="linkList">
             <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/little_print.css?cacherefResh19111')}}', 'small');">A4印刷</a>
-            <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/detail_print.css?cacherefResh19111')}}', 'large');">L版印刷</a>
+            {{-- <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/detail_print.css?cacherefResh19111')}}', 'large');">L版印刷</a> --}}
             <a class="linkBtn" href="/manager/user_list">一覧へ戻る</a>
         </div>
         <div class="popUp" id="popupBg" hidden>
