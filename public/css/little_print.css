@@ -21,9 +21,9 @@
     width: 50vw;
 }
 
-.photoArea{
+.photoEle{
     margin: 0 auto;
-    text-align: center;
+    width: 100%;
 }
 
 .left{
