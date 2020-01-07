@@ -89,7 +89,7 @@
         </div>    
         <div class="linkList">
             <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/little_print.css?cacherefResh19111')}}', 'small');">A4印刷</a>
-            <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/detail_print.css?cacherefResh19111')}}', 'large');">L版印刷</a>
+            {{-- <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/detail_print.css?cacherefResh19111')}}', 'large');">L版印刷</a> --}}
             <a class="linkBtn" href="/manager/user_list">一覧へ戻る</a>
         </div>
         <div class="popUp" id="popupBg" hidden>
