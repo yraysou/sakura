@@ -1,89 +1,41 @@
 #wrap{
     padding-top: 0px;
 }
-
 .original{
     display: none;
 }
-
 .print{
     display: none;
 }
-
 .esImg{
     text-indent:100%;
     overflow:hidden;
     white-space:nowrap;
 }
-
 .es img{
     height: 50vw;
     width: 50vw;
 }
-
 .photoEle{
     margin: 0 auto;
     width: 100%;
 }
-
 .left{
     display: none;
 }
-
+form{
+    display: none;
+}
 .mix{
     display: inline;
     margin-top: 3rem;
     width: 50%;
 }
-
-.small_msg{
-    display: none;
-}
-
-.linkBtn{
-    display: none;
-}
-
-.qrCss{
-    display: inline;
-}
-
-.rightEle{
-    font-size: 1.8rem;
-    margin-top: -1px;
-}
-
-.rightEle input{
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-.time input{
-    width:100%;
-    margin-right: -10px;
-}
-
-.time{
-    margin-right: -50px;
-}
-
-.tel{
-    display: none;
-}
-
-.bottomEle{
-    border:solid 6px antiquewhite;
-    border-radius: 5px;
-    padding: 15px 20px;
-    margin: 0 auto;
-}
-
 .fontRed{
     font-size: 1.8rem;
     margin-bottom: 2.4rem;
     line-height: 1.5;
 }
-
 .printUrl-wrap{
     display: inline-block;
 }
@@ -93,4 +45,38 @@
 }
 .printUrl{
     font-size: 2.3rem;
+}
+
+.formArea{
+    display: block;
+    width: 50%;
+}
+.shooting_date{
+    width: 55%;
+}
+.small_msg{
+    display: none;
+}
+.linkBtn{
+    display: none;
+}
+.qrCss{
+    display: inline;
+}
+.rightEle{
+    font-size: 1.8rem;
+    margin-top: -1px;
+}
+.rightEle input{
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+.tel{
+    display: none;
+}
+.bottomEle{
+    border:solid 6px antiquewhite;
+    border-radius: 5px;
+    padding: 15px 20px;
+    margin: 0 auto;
 }
