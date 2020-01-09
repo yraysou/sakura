@@ -3,7 +3,7 @@
 @section('css')
     <link rel="stylesheet" type="text/css" href="{{asset('/css/detail.css?cacherefResh19111')}}">
     <link rel="stylesheet" id="large" type="text/css" href="{{asset('/css/detail_print.css?cacherefResh19111')}}" media="print">
-    <link rel="stylesheet" id="small" type="text/css" href="{{asset('/css/little_print.css?cacherefResh19111')}}">
+    <link rel="stylesheet" id="small" type="text/css" href="{{asset('/css/little_print.css?cacherefResh19111')}}" media="print">
     <link id="addClass">
     @endsection
 
