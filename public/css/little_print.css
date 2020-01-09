@@ -32,7 +32,8 @@
 
 .mix{
     display: inline;
-    margin-top: 7rem;
+    margin-top: 3rem;
+    width: 50%;
 }
 
 .small_msg{
@@ -73,10 +74,8 @@
 .bottomEle{
     border:solid 6px antiquewhite;
     border-radius: 5px;
-    height: 29vh;
-    padding-right: 95px;
-    padding-left: 10px;
-    padding-top: 15px;
+    padding: 15px 20px;
+    margin: 0 auto;
 }
 
 .fontRed{
