@@ -42,14 +42,6 @@
                         <p class="printUrl">{{route('user.loginpage')}}</p>
                     </div>
                 </div>
-                <div class="mix">
-                    <p class="fontRed">使用可能期限:<br><span class="mixEle">{{ $users->a_year_later }}</span><br/>
-                    忘れずにデータを取得してください</p>
-                    <div class="printUrl-wrap">
-                    <p class="printUrl-descript">パソコンをご利用の場合は<br>下記のURLからダウンロードください。</p>
-                    <p class="printUrl">{{route('user.loginpage')}}</p>
-                    </div>
-                </div>
                 <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post" name="form1">
                     {{ csrf_field() }}
                     <div class="right">
@@ -80,7 +72,34 @@
                         <a  class="linkBtn more" name="update" onclick="popupOpen()">更新</a>
                         <div class="qrCss">{!! QrCode::size(160)->generate(route('user.loginpage')); !!}</div>      
                     </div>
-                </form>  
+                </form>
+                {{-- L版print用 --}}
+                <div class="mix">
+                    <p class="fontRed">使用可能期限:<br><span class="mixEle">{{ $users->a_year_later }}</span><br/>
+                    忘れずにデータを取得してください</p>
+                    <div class="printUrl-wrap">
+                    <p class="printUrl-descript">パソコンをご利用の場合は<br>下記のURLからダウンロードください。</p>
+                    <p class="printUrl">{{route('user.loginpage')}}</p>
+                    </div>
+                </div>
+                <div class="formArea">
+                    <div class="rightEle">
+                        <p>ID:</p> <span class="rightEle__detail">{{ $users->user_id }}</span>
+                    </div>
+                    <div class="rightEle">
+                        <p>Password:</p> <span class="rightEle__detail">{{ $users->conf_pass }}</span>
+                    </div>
+                    <div class="rightEle">
+                        <p>氏名:</p> <span class="rightEle__detail">{{ $users->name }}</span>
+                    </div>
+                    <div class="rightEle tel">
+                        <p>電話番号:</p><span class="rightEle__detail">{{ $users->tel_number }}</span><span class="small_msg">修正可</span>
+                    </div>    
+                    <div class="rightEle time">
+                        <p>撮影日:</p><span class="rightEle__detail">{{ $users->shooting_date }}</span><span class="small_msg">修正可</span>
+                    </div>    
+                    <div class="qrCss">{!! QrCode::size(150)->generate(route('user.loginpage')); !!}</div>  
+                </div>
             </div>
         </div>    
         <div class="procedure">
