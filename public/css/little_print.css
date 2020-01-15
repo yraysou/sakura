@@ -1,3 +1,6 @@
+#mainBlk{
+    padding: 0;
+}
 #wrap{
     padding-top: 0px;
 }
@@ -7,7 +10,12 @@
 .print{
     display: none;
 }
+/* .es{
+    display: flex;
+    width: 80%!important;
+} */
 .esImg{
+    margin: 0px auto!important;
     text-indent:100%;
     overflow:hidden;
     white-space:nowrap;
@@ -15,6 +23,10 @@
 .es img{
     height: 50vw;
     width: 50vw;
+}
+
+.photoArea{
+    margin: 0;
 }
 .photoEle{
     margin: 0 auto;
@@ -28,28 +40,28 @@ form{
 }
 .mix{
     display: inline;
-    margin-top: 3rem;
     width: 50%;
 }
 .fontRed{
-    font-size: 1.8rem;
-    margin-bottom: 2.4rem;
+    font-size: 1.2rem;
     line-height: 1.5;
 }
 .printUrl-wrap{
-    display: inline-block;
+    display: block;
+    padding-top: 1rem;
 }
 .printUrl-descript{
-    font-size: 1.4rem;
+    font-size: 1rem;
     line-height: 1.6;
 }
 .printUrl{
-    font-size: 2.3rem;
+    font-size: 1.4rem;
 }
 
 .formArea{
     display: block;
     width: 50%;
+    padding-top: 2rem;
 }
 .shooting_date{
     width: 55%;
@@ -61,10 +73,11 @@ form{
     display: none;
 }
 .qrCss{
+    text-align: right;
     display: inline;
 }
 .rightEle{
-    font-size: 1.8rem;
+    font-size: 1.3rem;
     margin-top: -1px;
 }
 .rightEle input{
@@ -75,8 +88,9 @@ form{
     display: none;
 }
 .bottomEle{
+    width: 90%;
     border:solid 6px antiquewhite;
     border-radius: 5px;
-    padding: 15px 20px;
+    padding: 15px 10px;
     margin: 0 auto;
 }

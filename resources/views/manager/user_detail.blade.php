@@ -77,10 +77,7 @@
                 <div class="mix">
                     <p class="fontRed">使用可能期限:<br><span class="mixEle">{{ $users->a_year_later }}</span><br/>
                     忘れずにデータを取得してください</p>
-                    <div class="printUrl-wrap">
-                    <p class="printUrl-descript">パソコンをご利用の場合は<br>下記のURLからダウンロードください。</p>
-                    <p class="printUrl">{{route('user.loginpage')}}</p>
-                    </div>
+                    <div class="qrCss">{!! QrCode::size(110)->generate(route('user.loginpage')); !!}</div>  
                 </div>
                 <div class="formArea">
                     <div class="rightEle">
@@ -98,8 +95,11 @@
                     <div class="rightEle time">
                         <p>撮影日:</p><span class="rightEle__detail">{{ $users->shooting_date }}</span><span class="small_msg">修正可</span>
                     </div>    
-                    <div class="qrCss">{!! QrCode::size(150)->generate(route('user.loginpage')); !!}</div>  
                 </div>
+            </div>
+            <div class="printUrl-wrap">
+                <p class="printUrl-descript">PCをご利用の場合は下記のURLからダウンロードください。</p>
+                <p class="printUrl">{{route('user.loginpage')}}</p>
             </div>
         </div>    
         <div class="procedure">
