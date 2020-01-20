@@ -76,7 +76,7 @@
                 {{-- L版print用 --}}
                 <div class="mix">
                     <p class="fontRed">使用可能期限:<br><span class="mixEle">{{ $users->a_year_later }}</span><br/>
-                    忘れずにデータを取得してください</p>
+                    忘れずにデータを<br>取得してください</p>
                     <div class="qrCss">{!! QrCode::size(110)->generate(route('user.loginpage')); !!}</div>  
                 </div>
                 <div class="formArea">

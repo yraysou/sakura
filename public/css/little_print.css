@@ -41,6 +41,7 @@ form{
 .mix{
     display: inline;
     width: 50%;
+    margin-top: 2rem;
 }
 .fontRed{
     font-size: 1.2rem;
