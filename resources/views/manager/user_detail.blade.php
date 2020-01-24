@@ -42,46 +42,64 @@
                         <p class="printUrl">{{route('user.loginpage')}}</p>
                     </div>
                 </div>
-                    <div class="mix">
-                        <p class="fontRed">使用可能期限:<span class="mixEle">{{ $users->a_year_later }}</span><br/>
-                        忘れずにデータを取得してください</p>
-                        <div class="printUrl-wrap">
-                            <p class="printUrl-descript">パソコンをご利用の場合は<br>下記のURLからダウンロードください。</p>
-                            <p class="printUrl">{{route('user.loginpage')}}</p>
+                <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post" name="form1">
+                    {{ csrf_field() }}
+                    <div class="right">
+                        <script>
+                            @if (session('flash_message'))
+                                $(function () {
+                                        toastr.success('{{ session('flash_message') }}');
+                                });
+                            @endif
+                        </script>
+                        <div class="rightEle">
+                            <p>ID:</p> <span class="rightEle__detail">{{ $users->user_id }}</span>
+                            <input type="hidden" value="{{ $users->user_id }}" name="user_id">
                         </div>
+                        <div class="rightEle">
+                            <p>Password:</p> <span class="rightEle__detail">{{ $users->conf_pass }}</span>
+                        </div>
+                        <div class="rightEle">
+                            <p>氏名:</p> <span class="rightEle__detail">{{ $users->name }}</span>
+                        </div>
+                        <div class="rightEle tel">
+                            <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}"><span class="small_msg">修正可</span>
+                        </div>    
+                        <div class="rightEle time">
+                            <p>撮影日:</p><input class="shooting_date" type="date"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
+                        </div>    
+                        <input  type="hidden" class="linkBtn"  value="更新" name="update" >
+                        <a  class="linkBtn more" name="update" onclick="popupOpen()">更新</a>
+                        <div class="qrCss">{!! QrCode::size(160)->generate(route('user.loginpage')); !!}</div>      
                     </div>
-                    <form action="{{ route('userUpdate')}}" enctype="multipart/form-data" method="post" name="form1">
-                            {{ csrf_field() }}
-                                <div class="right">
-                                        <script>
-                                            @if (session('flash_message'))
-                                                $(function () {
-                                                        toastr.success('{{ session('flash_message') }}');
-                                                });
-                                            @endif
-                                        </script>
-            
-                                    <div class="rightEle">
-                                        <p>ID:</p> <span class="rightEle__detail">{{ $users->user_id }}</span>
-                                        <input type="hidden" value="{{ $users->user_id }}" name="user_id">
-                                    </div>
-                                    <div class="rightEle">
-                                        <p>Password:</p> <span class="rightEle__detail">{{ $users->conf_pass }}</span>
-                                    </div>
-                                    <div class="rightEle">
-                                        <p>氏名:</p> <span class="rightEle__detail">{{ $users->name }}</span>
-                                    </div>
-                                    <div class="rightEle tel">
-                                        <p>電話番号:</p><input type="text" name="tel_number" value="{{ $users->tel_number }}"><span class="small_msg">修正可</span>
-                                    </div>    
-                                    <div class="rightEle time">
-                                        <p>撮影日:</p><input class="shooting_date" type="date"  name="shooting_date" value="{{ $users->shooting_date }}"><span class="small_msg">修正可</span>
-                                    </div>    
-                                    <input  type="hidden" class="linkBtn"  value="更新" name="update" >
-                                    <a  class="linkBtn more" name="update" onclick="popupOpen()">更新</a>
-                                    <div class="qrCss">{!! QrCode::size(160)->generate(route('user.loginpage')); !!}</div>      
-                            </div>
-                    </form>  
+                </form>
+                {{-- L版print用 --}}
+                <div class="mix">
+                    <p class="fontRed">使用可能期限:<br><span class="mixEle">{{ $users->a_year_later }}</span><br/>
+                    忘れずにデータを<br>取得してください</p>
+                    <div class="qrCss">{!! QrCode::size(110)->generate(route('user.loginpage')); !!}</div>  
+                </div>
+                <div class="formArea">
+                    <div class="rightEle">
+                        <p>ID:</p> <span class="rightEle__detail">{{ $users->user_id }}</span>
+                    </div>
+                    <div class="rightEle">
+                        <p>Password:</p> <span class="rightEle__detail">{{ $users->conf_pass }}</span>
+                    </div>
+                    <div class="rightEle">
+                        <p>氏名:</p> <span class="rightEle__detail">{{ $users->name }}</span>
+                    </div>
+                    <div class="rightEle tel">
+                        <p>電話番号:</p><span class="rightEle__detail">{{ $users->tel_number }}</span><span class="small_msg">修正可</span>
+                    </div>    
+                    <div class="rightEle time">
+                        <p>撮影日:</p><span class="rightEle__detail">{{ $users->shooting_date }}</span><span class="small_msg">修正可</span>
+                    </div>    
+                </div>
+            </div>
+            <div class="printUrl-wrap">
+                <p class="printUrl-descript">PCをご利用の場合は下記のURLからダウンロードください。</p>
+                <p class="printUrl">{{route('user.loginpage')}}</p>
             </div>
         </div>    
         <div class="procedure">
@@ -89,7 +107,7 @@
         </div>    
         <div class="linkList">
             <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/little_print.css?cacherefResh19111')}}', 'small');">A4印刷</a>
-            {{-- <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/detail_print.css?cacherefResh19111')}}', 'large');">L版印刷</a> --}}
+            <a class="linkBtn" href="#" onclick="changeCss('{{asset('/css/detail_print.css?cacherefResh19111')}}', 'large');">L版印刷</a>
             <a class="linkBtn" href="/manager/user_list">一覧へ戻る</a>
         </div>
         <div class="popUp" id="popupBg" hidden>

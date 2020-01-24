@@ -141,7 +141,7 @@ form{
     background-color: #ff9900;
 }
 
-.qrCss{
+.qrCss, .formArea{
     display: none;
 }
 
