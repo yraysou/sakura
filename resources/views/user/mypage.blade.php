@@ -60,5 +60,8 @@
             >ダウンロードする
             </a>
         </div>
+        <div class="text-center">
+            <a class="linkBtn" href="{{route('user.logout')}}">ログアウトする</a>
+        </div>
     </div>
 @endsection
