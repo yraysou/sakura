@@ -1,13 +1,13 @@
 @media screen and (max-width:479px){
     #mainBlk{
-        height: 100vh!important;
+        /* height: 100vh!important; */
         padding: 2%;
     }
 
     #wrap {
         padding-top: 0;
         background-color: antiquewhite;
-        height: 90%;
+        min-height: 100vh;
     }
 
     .sendButton, input[type="submit"].sendButton {
@@ -94,7 +94,7 @@
     .getImage {
         margin: 7px 0;
         width: 45%;
-        font-size:1rem;
+        font-size:1.2rem;
     }  
     
 }
