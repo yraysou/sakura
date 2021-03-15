@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function () {
       random += str.charAt(Math.floor(Math.random() * str.length));
     }
     // 画像名の作成
-    const downloadImgName = className+'_'+random+'.png';
+    let imgName = ev.target.value.split('/');
+    const downloadImgName = imgName.slice(-1)[0];
     // aタグのdownloadに代入
     ev.target.nextElementSibling.download = downloadImgName;
     // hrefに選択された画像のurlを代入
