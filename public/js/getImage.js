@@ -7,13 +7,6 @@ document.addEventListener('DOMContentLoaded', function () {
   const len = 12;
 
   getImg[0].addEventListener('change', function (ev) {
-    // 選択された画像のclassNameを取得
-    const className = ev.target.options[ev.target.selectedIndex].className;
-    //ランダムな文字列の生成
-    let random = "";
-    for(var i=0;i<len;i++){
-      random += str.charAt(Math.floor(Math.random() * str.length));
-    }
     // 画像名の作成
     let imgName = ev.target.value.split('/');
     const downloadImgName = imgName.slice(-1)[0];
